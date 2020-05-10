@@ -1,0 +1,30 @@
+---
+layout: base.njk
+---
+<h1>{{ title }}</h1>
+{{ content | safe }}
+
+
+<h2> Posts </h2>
+<ul>
+{%- for post in collections.post -%}
+  <article>
+    <h1>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    </h1>
+    {{ post.date }}
+  </article>
+{%- endfor -%}
+</ul>
+
+<h2> Projects </h2>
+<ul>
+{%- for project in collections.project -%}
+  <article>
+    <h1>
+      <a href="{{ project.url | url }}">{{ project.data.title }}</a>
+    </h1>
+    {{ project.date }}
+  </article>
+{%- endfor -%}
+</ul>
