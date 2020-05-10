@@ -29,6 +29,12 @@ module.exports = function(eleventyConfig) {
    */
 
   /**
+   * Add shortcodes
+   *
+   * @link https://www.11ty.io/docs/shortcodes/
+   */
+
+  /**
    * Add Transforms
    *
    * @link https://www.11ty.io/docs/config/#transforms
@@ -68,7 +74,7 @@ module.exports = function(eleventyConfig) {
 
   return {
     dir: {
-      layouts: '_layouts',
+      layouts: '_includes/layouts',
       input: 'src/site',
       output: 'dist',
     },

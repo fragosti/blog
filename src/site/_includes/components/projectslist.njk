@@ -1,0 +1,10 @@
+<ul>
+{%- for project in collections.project -%}
+  <article>
+    <h1>
+      <a href="{{ project.url | url }}">{{ project.data.title }}</a>
+    </h1>
+    {{ project.date }}
+  </article>
+{%- endfor -%}
+</ul>
