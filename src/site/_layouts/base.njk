@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{ title or 'fragosti' }}</title>
+    <link rel="stylesheet" href="/assets/css/app.css" />
+    <script src="/assets/js/app.js" defer></script>
+  </head>
+  <body>
+    <header> Header </header>
+    {{ content | safe }}
+    <footer> Footer </footer>
+  </body>
+</html>
