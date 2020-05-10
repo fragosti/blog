@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{ title or 'Eleventy Starter' }}</title>
+    <link rel="stylesheet" href="/assets/css/app.css" />
+    <script src="/assets/js/app.js" defer></script>
+  </head>
+  <body data-controller="hello">
+    <h1>{{ title }}</h1>
+    {{ content | safe }}
+  </body>
+</html>
