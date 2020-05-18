@@ -1,10 +1,12 @@
 <ul>
-{%- for post in collections.post -%}
-  <article>
-    <h1>
+{%- for post in collections.post | reverse | limit(postsListLimit) -%}
+  <article class="py-3">
+    <h3>
       <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-    </h1>
-    {{ post.date }}
+    </h3>
+    <label>
+      {{ post.date | dateReadable }}
+    </label>
   </article>
 {%- endfor -%}
 </ul>

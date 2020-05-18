@@ -1,7 +1,7 @@
 ---
 layout: post.njk
-title: First Ever Blog Post
-date: 2019-05-30
+title: Post About Another Thing
+date: 2019-10-30
 tags: post
 ---
 

@@ -1,4 +1,5 @@
 const fs = require('fs')
+const moment = require('moment')
 
 module.exports = function(eleventyConfig) {
   /**
@@ -27,6 +28,16 @@ module.exports = function(eleventyConfig) {
    *
    * @link https://www.11ty.io/docs/filters/
    */
+  eleventyConfig.addFilter('dateReadable', date => {
+    return moment(date).format('LL')
+  })
+
+  eleventyConfig.addFilter('limit', function(array, limit) {
+    if (!limit) {
+      return array
+    }
+    return array.slice(0, limit)
+  })
 
   /**
    * Add shortcodes
