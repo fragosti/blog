@@ -4,17 +4,21 @@
 body {
   @apply font-secondary;
 }
-
 h1 {
-  @apply text-2xl;
+  @apply text-5xl font-bold font-primary;
 }
 h2 {
-  @apply text-xl;
+  @apply text-2xl font-semibold font-primary;
 }
 h3 {
-  @apply text-lg;
+  @apply text-lg font-primary;
 }
-
+p {
+  @apply text-gray-800;
+}
+p a {
+  @apply text-gray-600 underline;
+}
 .header-link {
   @apply text-gray-600 font-primary;
 }

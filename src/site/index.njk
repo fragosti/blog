@@ -1,12 +1,30 @@
 ---
 layout: base.njk
 ---
-<h1>{{ title }}</h1>
-{{ content | safe }}
 
+<div class="my-10">
+  <h1 class="text-5xl font-bold"> Hi. </h1>
+  <p>
+    I'm Lupin - currently teaching "Defense against the Dark Arts" at Hogwarts, Great Britain. 
+    I recently published a book called <a href="https://harrypotter.fandom.com/wiki/Dementor">Those nasty Dementors. </a>
+    It teaches everything you need to know about defending against Dementors.
+  </p>
+</div>
 
-<h2> Posts </h2>
+<div class="divide-y divide-gray-500 mb-5 mt-8">
+  <div class="flex flex-row justify-between py-2">
+    <h2>Latest Posts</h2>
+    <a class="header-link self-center" href="/posts">Read all posts</a>
+  </div>
+  <div></div>
+</div>
 {% include "components/postslist.njk" %}
 
-<h2> Projects </h2>
+<div class="divide-y divide-gray-500 mb-5 mt-8">
+  <div class="flex flex-row justify-between py-2">
+    <h2>Latest Projects</h2>
+    <a class="header-link self-center" href="/projects">See all projects</a>
+  </div>
+  <div></div>
+</div>
 {% include "components/projectslist.njk" %}
