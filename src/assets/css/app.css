@@ -1,5 +1,32 @@
 @tailwind base;
 
+/* Base styles and font-face. */
+body {
+  @apply font-secondary;
+}
+
+h1 {
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
+}
+
+.header-link {
+  @apply text-gray-600 font-primary;
+}
+
+.header-link:hover {
+  @apply underline text-black;
+}
+
 @tailwind components;
 
+/* Custom components using @apply */
+
 @tailwind utilities;
+
+/* Custom utilities, can wrap in @responsive, @variants hover, etc.. */
