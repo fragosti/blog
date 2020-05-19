@@ -5,7 +5,7 @@ body {
   @apply font-secondary;
 }
 h1 {
-  @apply text-5xl font-bold font-primary;
+  @apply text-5xl font-bold font-primary leading-none;
 }
 h2 {
   @apply text-2xl font-semibold font-primary;
@@ -14,13 +14,13 @@ h3 {
   @apply text-xl font-secondary font-semibold text-gray-800;
 }
 p {
-  @apply text-gray-800;
+  @apply text-gray-800 leading-relaxed;
 }
 p a {
   @apply text-gray-600 underline;
 }
 label {
-  @apply text-gray-600 font-primary text-sm;
+  @apply text-gray-600 font-primary text-sm inline-block;
 }
 .header-link {
   @apply text-gray-600 font-primary;
