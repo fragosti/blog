@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ["'Inter'", ...defaultTheme.fontFamily.sans],
-        secondary: ["'Catamaran'", ...defaultTheme.fontFamily.sans],
+        secondary: ["'Noto Sans'", ...defaultTheme.fontFamily.sans],
       },
     },
   },
