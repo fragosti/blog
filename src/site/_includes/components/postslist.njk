@@ -7,6 +7,9 @@
     <label>
       {{ post.date | dateReadable }}
     </label>
+    <p class="line-clamp py-1"> 
+      {% excerpt post %}
+    </p>
   </article>
 {%- endfor -%}
 </ul>
