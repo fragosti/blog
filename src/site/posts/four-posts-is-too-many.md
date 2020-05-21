@@ -22,4 +22,8 @@ const a = 3
 const doSomething = () => {
   console.log('hey')
 }
+// not working
+function hey() {
+  console.log('hey')
+}
 ```

@@ -1,5 +1,6 @@
 const fs = require('fs')
 const moment = require('moment')
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 
 module.exports = function(eleventyConfig) {
   /**
@@ -111,6 +112,15 @@ module.exports = function(eleventyConfig) {
         })
       },
     },
+  })
+
+  /**
+   * Add plugins
+   *
+   * @link https://www.11ty.dev/docs/plugins/
+   */
+  eleventyConfig.addPlugin(syntaxHighlight, {
+    templateFormats: ['md'],
   })
 
   return {
