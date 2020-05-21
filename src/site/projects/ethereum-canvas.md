@@ -1,10 +1,10 @@
 ---
 layout: project.njk
-title: 0x
-description: Decentralized exchange protocol
+title: Ethereum Canvas
+description: Draw on the blockchain
 date: 2019-05-30
 tags: project
-imageName: 0x.svg
+imageName: ethereum-canvas.png
 ---
 
 First sentence. Second sentence.

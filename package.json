@@ -14,10 +14,10 @@
     "clean:site": "rimraf ./dist",
     "build": "run-s clean build:*",
     "build:html": "cross-env ELEVENTY_ENV=production eleventy",
-    "build:assets": "cross-env NODE_ENV=production parcel build ./src/assets/css/app.css ./src/assets/js/app.js --out-dir ./dist/assets --no-source-maps",
+    "build:assets": "cross-env NODE_ENV=production parcel build ./src/assets/**/* --out-dir ./dist/assets --no-source-maps",
     "watch": "run-s clean:* && run-p watch:*",
     "watch:html": "cross-env ELEVENTY_ENV=development eleventy --serve --port=8080",
-    "watch:assets": "cross-env NODE_ENV=development parcel watch ./src/assets/css/app.css ./src/assets/js/app.js --out-dir ./dist/assets --no-source-maps --no-hmr",
+    "watch:assets": "cross-env NODE_ENV=development parcel watch ./src/assets/**/* --out-dir ./dist/assets --no-source-maps --no-hmr",
     "start": "yarn watch",
     "prettier": "prettier --write '{.,src/**}/*.{js,md,json}' --config .prettierrc"
   },
