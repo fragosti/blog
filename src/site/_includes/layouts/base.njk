@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/assets/css/prism-material-light.css" />
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="/assets/js/app.js" defer></script>
   </head>
   <body class="container max-w-2xl mx-auto">
@@ -22,8 +23,9 @@
             <a class="header-link" href="/about">About</a>
           </div>
           <div class="space-x-3">
-            <a class="header-link" target="_blank" href="https://twitter.com/fragosti">Twitter</a>
-            <a class="header-link" target="_blank" href="https://github.com/fragosti">GitHub</a>
+            <a class="header-link" target="_blank" href="https://twitter.com/fragosti"><i data-feather="twitter"></i></a>
+            <a class="header-link" target="_blank" href="https://github.com/fragosti"><i data-feather="github"></i></a>
+            <a class="header-link" target="_blank" href="https://www.linkedin.com/in/fragosti/"><i data-feather="linkedin"></i></a>
           </div>
         </div>
       </header>
@@ -34,5 +36,8 @@
       <div></div>
       <footer class="text-gray-600 py-4">© 2020 All rights reserved.</footer>
     </div>
+    <script>
+      feather.replace({ class: 'inline-block' })
+    </script>
   </body>
 </html>
