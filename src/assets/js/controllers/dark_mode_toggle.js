@@ -3,7 +3,8 @@ import { Controller } from 'stimulus'
 export default class extends Controller {
   static targets = ['lightToggle', 'darkToggle']
   initialize() {
-    const isDarkMode = localStorage.getItem('isDarkMode') === 'true'
+    const isDarkMode =
+      (localStorage && localStorage).getItem('isDarkMode') === 'true'
     if (isDarkMode) {
       this.useDarkMode()
     }

@@ -22,17 +22,41 @@ p a {
 label {
   @apply text-gray-600 font-primary text-sm inline-block;
 }
+.header-link {
+  @apply text-gray-600 font-primary cursor-pointer;
+}
+.header-link:hover {
+  @apply underline text-black;
+}
 .line-clamp {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-.header-link {
-  @apply text-gray-600 font-primary cursor-pointer;
-}
-.header-link:hover {
-  @apply underline text-black;
+
+.mode-dark {
+  body {
+    @apply text-white;
+  }
+  .header-link {
+    @apply text-gray-500;
+  }
+  .header-link:hover {
+    @apply text-white;
+  }
+  p {
+    @apply text-gray-100;
+  }
+  p a {
+    @apply text-indigo-300;
+  }
+  label {
+    @apply text-gray-500;
+  }
+  h3 {
+    @apply text-gray-100;
+  }
 }
 
 @tailwind components;
