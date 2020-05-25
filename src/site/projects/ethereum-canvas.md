@@ -4,7 +4,7 @@ title: Ethereum Canvas
 description: Draw on the blockchain
 date: 2019-05-30
 tags: project
-imageName: ethereum-canvas.png
+iconImageName: ethereum-canvas.png
 ---
 
 First sentence. Second sentence.

@@ -4,7 +4,7 @@ title: Renderproxy
 description: Make your app crawlable without a single line of code
 date: 2019-05-30
 tags: project
-imageName: renderproxy.png
+iconImageName: renderproxy.png
 ---
 
 First sentence. Second sentence.

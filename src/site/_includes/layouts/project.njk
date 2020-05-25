@@ -1,5 +1,30 @@
 ---
 layout: base.njk
 ---
-<h1> {{ title }} </h1>
-{{ content | safe }}
+<h1 class="mb-3">{{ title }}</h1>
+<label class="mb-3 text-lg">{{ description }}</label>
+<div class="flex">
+  {% if websiteUrl %}
+    <a href="{{ websiteUrl }}" target="_blank" class="mr-4 header-link">
+      <i data-feather="globe"></i>
+    </a>
+  {% endif %}
+  {% if githubUrl %}
+    <a href="{{ githubUrl }}" target="_blank" class="mr-4 header-link">
+      <i data-feather="github"></i>
+    </a>
+  {% endif %}
+  {% if twitterUrl %}
+    <a href="{{ twitterUrl }}" target="_blank" class="mr-4 header-link">
+      <i data-feather="twitter"></i>
+    </a>
+  {% endif %}
+  {% if genericUrl %}
+    <a href="{{ twitterUrl }}" target="_blank" class="mr-4 header-link">
+      <i data-feather="link"></i>
+    </a>
+  {% endif %}
+</div>
+<article class="my-8 space-y-4">
+  {{ content | safe }}
+</article>
