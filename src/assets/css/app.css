@@ -40,19 +40,19 @@ label {
     @apply text-white;
   }
   .header-link {
-    @apply text-gray-500;
+    @apply text-gray-600;
   }
   .header-link:hover {
     @apply text-white;
   }
   p {
-    @apply text-gray-100;
+    @apply text-gray-400;
   }
   p a {
     @apply text-indigo-300;
   }
   label {
-    @apply text-gray-500;
+    @apply text-gray-600;
   }
   h3 {
     @apply text-gray-100;
