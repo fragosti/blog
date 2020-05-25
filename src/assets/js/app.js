@@ -1,9 +1,9 @@
 import { Application } from 'stimulus'
 import Turbolinks from 'turbolinks'
 
-import HelloController from './controllers/hello_controller'
+import DarkModeController from './controllers/dark_mode_toggle'
 
 const application = Application.start()
-application.register('hello', HelloController)
+application.register('dark-mode-controller', DarkModeController)
 
 Turbolinks.start()

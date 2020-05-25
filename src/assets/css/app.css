@@ -29,7 +29,7 @@ label {
   -webkit-box-orient: vertical;
 }
 .header-link {
-  @apply text-gray-600 font-primary;
+  @apply text-gray-600 font-primary cursor-pointer;
 }
 .header-link:hover {
   @apply underline text-black;

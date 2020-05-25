@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const { theme, variants } = require('tailwindcss/defaultConfig')
 
 module.exports = {
   purge: [
@@ -9,11 +9,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ["'Inter'", ...defaultTheme.fontFamily.sans],
-        secondary: ["'Noto Sans'", ...defaultTheme.fontFamily.sans],
+        primary: ["'Inter'", ...theme.fontFamily.sans],
+        secondary: ["'Noto Sans'", ...theme.fontFamily.sans],
       },
     },
   },
-  variants: {},
-  plugins: [],
+  variants: {
+    borderColor: ['dark', 'dark-hover', ...variants.borderColor],
+    textColor: ['dark', 'dark-hover', ...variants.textColor],
+    backgroundColor: ['dark', 'dark-hover', ...variants.backgroundColor],
+  },
+  plugins: [require('tailwindcss-dark-mode')()],
 }
