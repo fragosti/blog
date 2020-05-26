@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="mode-dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
@@ -18,14 +18,14 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="/assets/js/app.js" defer></script>
   </head>
-  <body class="container max-w-2xl mx-auto dark:bg-gray-900 px-4">
+  <body class="container max-w-2xl mx-auto dark:bg-gray-900 px-4 lg:px-0">
     <div class="divide-y divide-gray-500">
       <header>
         <div class="flex flex-row justify-between items-center my-6">    
           <a href="/" class="block font-secondary text-2xl font-bold">fragosti</a>
           <div data-controller="dark-mode-controller" class="header-link mt-8 mb-6">
-            <i data-feather="moon" data-target="dark-mode-controller.darkToggle" data-action="click->dark-mode-controller#useDarkMode"></i>
-            <i data-feather="sun" data-target="dark-mode-controller.lightToggle" class="hidden" data-action="click->dark-mode-controller#useLightMode"></i>
+            <i data-feather="moon" data-target="dark-mode-controller.darkToggle" class="hidden" data-action="click->dark-mode-controller#useDarkMode"></i>
+            <i data-feather="sun" data-target="dark-mode-controller.lightToggle" data-action="click->dark-mode-controller#useLightMode"></i>
           </div>
         </div>
         <div class="flex flex-row justify-between py-2">

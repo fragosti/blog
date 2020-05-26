@@ -3,21 +3,21 @@ import { Controller } from 'stimulus'
 export default class extends Controller {
   static targets = ['lightToggle', 'darkToggle']
   initialize() {
-    const isDarkMode =
-      (localStorage && localStorage).getItem('isDarkMode') === 'true'
-    if (isDarkMode) {
-      this.useDarkMode()
+    const isLightMode =
+      (localStorage && localStorage).getItem('isLightMode') === 'true'
+    if (isLightMode) {
+      this.useLightMode()
     }
   }
   useDarkMode() {
     document.documentElement.classList.add('mode-dark')
-    localStorage.setItem('isDarkMode', true)
+    localStorage.setItem('isLightMode', false)
     this.darkToggleTarget.classList.add('hidden')
     this.lightToggleTarget.classList.remove('hidden')
   }
   useLightMode() {
     document.documentElement.classList.remove('mode-dark')
-    localStorage.setItem('isDarkMode', false)
+    localStorage.setItem('isLightMode', true)
     this.darkToggleTarget.classList.remove('hidden')
     this.lightToggleTarget.classList.add('hidden')
   }
