@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{ title or 'fragosti' }}</title>
+    <title>
+      {% if title %}
+        {{ title }} | fragosti
+      {% else %}
+        fragosti
+      {% endif %}
+    </title>
     <link rel="stylesheet" href="/assets/css/app.css" />
     <link rel="stylesheet" href="/assets/css/prism-material-light.css" />
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:300,400,500,600,700,800&display=swap" rel="stylesheet">
