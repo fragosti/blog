@@ -5,17 +5,16 @@ description: Make your app crawlable without a single line of code
 date: 2019-05-30
 tags: project
 iconImageName: renderproxy.png
+githubUrl: https://github.com/fragosti/renderproxy
+genericUrl: https://www.producthunt.com/posts/renderproxy
 ---
 
-First sentence. Second sentence.
+The idea for Renderproxy came to me while at work. The [0x website](https://0x.org/) is completely written in React and was having some SEO issues. Single Page Apps have a hard time being crawled by search engine bots, and one way to fix this is to implement [dynamic rendering](https://developers.google.com/search/docs/guides/dynamic-rendering), such that bots get served up a pre-rendered version of your site. Google recommends this.
 
-## Subheading
+Looking online, I was hoping to find something like Renderproxy, but all the solutions I found required me to run my own server, or switch hosting providers. We ended up implementing our own custom solution.
 
-Content.
+With Renderproxy, all you need to do is sign up, and change your DNS settings.
 
-```js
-const a = 3
-const doSomething = () => {
-  console.log('hey')
-}
-```
+Along the way, I realized it could do other cool things, like get you free custom domains to sites you've built with website builders. In general, it was the easiest and fastest way to set up a reverse proxy that I've seen.
+
+Ultimately, Renderproxy acquired some customers but was not worth running anymore from a maintenance standpoint, so it was shut down a few months after being released. I realized halfway through building Renderproxy that while it did provide a unique solution, it only made sense for a very narrow set of use-cases, and for most use-cases I would recommend one of the many other solutions out there. Fun project though!
