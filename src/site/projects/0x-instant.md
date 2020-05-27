@@ -1,8 +1,8 @@
 ---
 layout: project.njk
-title: 0x
-description: Decentralized exchange protocol
-date: 2019-05-30
+title: 0x Instant
+description: A free and flexible way to offer simple crypto purchasing in any app or website
+date: 2018-05-30
 tags: project
 iconImageName: 0x.svg
 ---

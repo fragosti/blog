@@ -19,6 +19,11 @@ layout: base.njk
       <i data-feather="twitter"></i>
     </a>
   {% endif %}
+  {% if youtubeUrl %}
+    <a href="{{ youtubeUrl }}" target="_blank" class="mr-4 header-link">
+      <i data-feather="youtube"></i>
+    </a>
+  {% endif %}
   {% if genericUrl %}
     <a href="{{ genericUrl }}" target="_blank" class="mr-4 header-link">
       <i data-feather="link"></i>

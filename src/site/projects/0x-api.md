@@ -1,10 +1,10 @@
 ---
 layout: project.njk
-title: Ethereum Canvas
-description: Draw on the blockchain
-date: 2018-01-30
+title: 0x API
+description: Access all DEX liquidity through one API
+date: 2020-01-30
 tags: project
-iconImageName: ethereum-canvas.png
+iconImageName: 0x-api.png
 ---
 
 First sentence. Second sentence.
