@@ -1,6 +1,8 @@
 const fs = require('fs')
 const moment = require('moment')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const markdownIt = require('markdown-it')
+const markdownItLinkAttr = require('markdown-it-link-attributes')
 
 module.exports = function(eleventyConfig) {
   /**
@@ -113,6 +115,23 @@ module.exports = function(eleventyConfig) {
       },
     },
   })
+
+  /**
+   * Set markdown libraries
+   *
+   * @link https://www.11ty.dev/docs/languages/markdown/#optional-set-your-own-library-instance
+   */
+  eleventyConfig.setLibrary(
+    'md',
+    markdownIt({ html: true }).use(markdownItLinkAttr, {
+      // Make external links open in a new tab.
+      pattern: /^https?:\/\//,
+      attrs: {
+        target: '_blank',
+        rel: 'noopener noreferrer',
+      }
+    })
+  )
 
   /**
    * Add plugins
