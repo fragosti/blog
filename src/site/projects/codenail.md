@@ -11,4 +11,8 @@ genericUrl: https://www.producthunt.com/posts/codenail
 twitterUrl: https://twitter.com/codenail
 ---
 
-Whether you've written code you're proud of, have a personal project you want to commemorate, want a parting gift for your intern, or even just like all the pretty colors: this is the place to order a poster or a shirt of it!
+If you have some code and a logo, you can use Codenail to create a poster or a shirt out of them. It provides a UX where you can paste in your code, shape it into a logo, and cycle through different styles until you find one you're excited about. Once you do, Codenail will print the shirt or poster and send it to your address (shipping is free).
+
+Over the years, Codenail has serviced hundreds of customers and brings in approximately \$200 monthly recurring revenue. It had a very successful [Product Hunt](https://www.producthunt.com/posts/codenail) launch, even getting [a tweet](https://twitter.com/rrhoover/status/900115867522019330) from Ryan Hoover himself!
+
+![Codenail Poster](/assets/img/codenail-framed-poster.jpeg)
