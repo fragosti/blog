@@ -2728,6 +2728,11 @@ electron-to-chromium@^1.3.413:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.432.tgz#3bf7b191978ff2e8bc3caf811bb52b1e9f9eab25"
   integrity sha512-/GdNhXyLP5Yl2322CUX/+Xi8NhdHBqL6lD9VJVKjH6CjoPGakvwZ5CpKgj/oOlbzuWWjOvMjDw1bBuAIRCNTlw==
 
+eleventy-plugin-youtube-embed@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/eleventy-plugin-youtube-embed/-/eleventy-plugin-youtube-embed-1.3.1.tgz#dcb04ea1b0b145c243e482c382c7ad383986d864"
+  integrity sha512-XesHak6ajsP+zcBRQDf3r/Bmyjs9O3+m/UUc+jq/Gt3Db3KZLVxIk2mbnYJOwcIbDH4tCznfYrOeKBihh+oHqA==
+
 elliptic@^6.0.0, elliptic@^6.5.2:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.2.tgz#05c5678d7173c049d8ca433552224a495d0e3762"

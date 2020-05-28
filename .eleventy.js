@@ -1,6 +1,7 @@
 const fs = require('fs')
 const moment = require('moment')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const embedYouTube = require('eleventy-plugin-youtube-embed')
 const markdownIt = require('markdown-it')
 const markdownItLinkAttr = require('markdown-it-link-attributes')
 
@@ -129,7 +130,7 @@ module.exports = function(eleventyConfig) {
       attrs: {
         target: '_blank',
         rel: 'noopener noreferrer',
-      }
+      },
     })
   )
 
@@ -140,6 +141,9 @@ module.exports = function(eleventyConfig) {
    */
   eleventyConfig.addPlugin(syntaxHighlight, {
     templateFormats: ['md'],
+  })
+  eleventyConfig.addPlugin(embedYouTube, {
+    allowFullscreen: false,
   })
 
   return {
