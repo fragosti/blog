@@ -4,6 +4,7 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const embedYouTube = require('eleventy-plugin-youtube-embed')
 const markdownIt = require('markdown-it')
 const markdownItLinkAttr = require('markdown-it-link-attributes')
+const typesetPlugin = require('eleventy-plugin-typeset')
 
 module.exports = function(eleventyConfig) {
   /**
@@ -145,6 +146,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(embedYouTube, {
     allowFullscreen: false,
   })
+  eleventyConfig.addPlugin(typesetPlugin())
 
   return {
     dir: {
