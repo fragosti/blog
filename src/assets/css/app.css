@@ -42,6 +42,13 @@ label {
   margin-left: -50vw;
   margin-right: -50vw;
 }
+blockquote {
+  @apply border-l-4 border-indigo-500;
+}
+blockquote p {
+  @apply ml-4 italic;
+}
+
 .mode-dark {
   body {
     @apply text-white;
@@ -63,6 +70,9 @@ label {
   }
   h3 {
     @apply text-gray-100;
+  }
+  blockquote {
+    @apply border-indigo-300;
   }
 }
 h2 .header-anchor {
