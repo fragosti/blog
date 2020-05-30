@@ -1,7 +1,7 @@
 <ul>
 {%- for project in collections.project | reverse | limit(projectsListLimit) -%}
   <article class="py-3 flex flex-row items-center">
-    <img src="/assets/img/{{ project.data.iconImageName }}" class="rounded-full h-16 w-16 flex items-center justify-center border-4 border-gray-800 dark:border-gray-500">
+    <img src="/assets/img/{{ project.data.iconImageName }}" alt="{{ project.data.title }} Project Icon" class="rounded-full h-16 w-16 flex items-center justify-center border-4 border-gray-800 dark:border-gray-500">
     <div class="px-4">
       <h3>
         <a href="{{ project.url | url }}">{{ project.data.title }}</a>

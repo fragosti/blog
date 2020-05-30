@@ -60,9 +60,9 @@ description: Posts, projects and more by fragosti
           </div>
           <div class="space-x-3">
             <a class="link" href="mailto:francesco@fragosti.com"><i data-feather="mail"></i></a>
-            <a class="link" target="_blank" href="https://twitter.com/fragosti"><i data-feather="twitter"></i></a>
-            <a class="link" target="_blank" href="https://github.com/fragosti"><i data-feather="github"></i></a>
-            <a class="link" target="_blank" href="https://www.linkedin.com/in/fragosti/"><i data-feather="linkedin"></i></a>
+            <a class="link" target="_blank" rel="noopener" href="https://twitter.com/fragosti"><i data-feather="twitter"></i></a>
+            <a class="link" target="_blank" rel="noopener" href="https://github.com/fragosti"><i data-feather="github"></i></a>
+            <a class="link" target="_blank" rel="noopener" href="https://www.linkedin.com/in/fragosti/"><i data-feather="linkedin"></i></a>
           </div>
         </div>
       </header>
@@ -73,11 +73,16 @@ description: Posts, projects and more by fragosti
       <div></div>
       <footer class="text-gray-600 py-4 flex flex-row justify-between flex-wrap items-center">
         <div>© 2020 All rights reserved.</div>
-        <a class="link py-2 sm:py-0" target="_blank" href="https://fragosti.substack.com/">Subscribe to updates</a>
+        <a class="link py-2 sm:py-0" target="_blank" rel="noopener" href="https://fragosti.substack.com/">Subscribe to updates</a>
       </footer>
     </div>
     <script>
       feather.replace({ class: 'inline-block' })
+    </script>
+    <script src="https://unpkg.com/simple-lightbox@2.1.0/dist/simpleLightbox.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/simple-lightbox@2.1.0/dist/simpleLightbox.min.css" />
+    <script>
+      new window.SimpleLightbox({ elements: 'img:not(.rounded-full)', urlAttribute: 'data-src' })
     </script>
   </body>
 </html>

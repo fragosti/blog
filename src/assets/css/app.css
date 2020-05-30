@@ -48,7 +48,15 @@ blockquote {
 blockquote p {
   @apply ml-4 italic;
 }
-
+h2 .header-anchor {
+  visibility: hidden;
+}
+h2:hover .header-anchor {
+  visibility: visible;
+}
+img:not(.rounded-full) {
+  @apply cursor-pointer;
+}
 .mode-dark {
   body {
     @apply text-white;
@@ -74,12 +82,6 @@ blockquote p {
   blockquote {
     @apply border-indigo-300;
   }
-}
-h2 .header-anchor {
-  visibility: hidden;
-}
-h2:hover .header-anchor {
-  visibility: visible;
 }
 
 @tailwind components;

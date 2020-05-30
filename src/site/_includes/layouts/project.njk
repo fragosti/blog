@@ -5,27 +5,27 @@ layout: base.njk
 <label class="mb-3 text-lg">{{ description }}</label>
 <div class="flex">
   {% if websiteUrl %}
-    <a href="{{ websiteUrl }}" target="_blank" class="mr-4 link">
+    <a href="{{ websiteUrl }}" target="_blank" rel="noopener" class="mr-4 link">
       <i data-feather="globe"></i>
     </a>
   {% endif %}
   {% if githubUrl %}
-    <a href="{{ githubUrl }}" target="_blank" class="mr-4 link">
+    <a href="{{ githubUrl }}" target="_blank" rel="noopener" class="mr-4 link">
       <i data-feather="github"></i>
     </a>
   {% endif %}
   {% if twitterUrl %}
-    <a href="{{ twitterUrl }}" target="_blank" class="mr-4 link">
+    <a href="{{ twitterUrl }}" target="_blank" rel="noopener" class="mr-4 link">
       <i data-feather="twitter"></i>
     </a>
   {% endif %}
   {% if youtubeUrl %}
-    <a href="{{ youtubeUrl }}" target="_blank" class="mr-4 link">
+    <a href="{{ youtubeUrl }}" target="_blank" rel="noopener" class="mr-4 link">
       <i data-feather="youtube"></i>
     </a>
   {% endif %}
   {% if genericUrl %}
-    <a href="{{ genericUrl }}" target="_blank" class="mr-4 link">
+    <a href="{{ genericUrl }}" target="_blank" rel="noopener" class="mr-4 link">
       <i data-feather="link"></i>
     </a>
   {% endif %}
