@@ -65,6 +65,12 @@ label {
     @apply text-gray-100;
   }
 }
+h2 .header-anchor {
+  visibility: hidden;
+}
+h2:hover .header-anchor {
+  visibility: visible;
+}
 
 @tailwind components;
 

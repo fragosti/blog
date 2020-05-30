@@ -4,6 +4,7 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const embedYouTube = require('eleventy-plugin-youtube-embed')
 const markdownIt = require('markdown-it')
 const markdownItLinkAttr = require('markdown-it-link-attributes')
+const markdownItAnchor = require('markdown-it-anchor')
 const typesetPlugin = require('eleventy-plugin-typeset')
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages')
 
@@ -126,14 +127,19 @@ module.exports = function(eleventyConfig) {
    */
   eleventyConfig.setLibrary(
     'md',
-    markdownIt({ html: true }).use(markdownItLinkAttr, {
-      // Make external links open in a new tab.
-      pattern: /^https?:\/\//,
-      attrs: {
-        target: '_blank',
-        rel: 'noopener noreferrer',
-      },
-    })
+    markdownIt({ html: true })
+      .use(markdownItAnchor, {
+        permalink: true,
+        permalinkSymbol: '<i data-feather="link" class="header-link"></i>',
+      })
+      .use(markdownItLinkAttr, {
+        // Make external links open in a new tab.
+        pattern: /^https?:\/\//,
+        attrs: {
+          target: '_blank',
+          rel: 'noopener noreferrer',
+        },
+      })
   )
 
   /**
