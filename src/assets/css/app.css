@@ -22,10 +22,10 @@ p a {
 label {
   @apply text-gray-600 font-primary text-sm inline-block;
 }
-.header-link {
+.link {
   @apply text-gray-600 font-primary cursor-pointer;
 }
-.header-link:hover {
+.link:hover {
   @apply underline text-black;
 }
 .line-clamp {
@@ -46,10 +46,10 @@ label {
   body {
     @apply text-white;
   }
-  .header-link {
+  .link {
     @apply text-gray-600;
   }
-  .header-link:hover {
+  .link:hover {
     @apply text-white;
   }
   p {

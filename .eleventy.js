@@ -130,7 +130,7 @@ module.exports = function(eleventyConfig) {
     markdownIt({ html: true })
       .use(markdownItAnchor, {
         permalink: true,
-        permalinkSymbol: '<i data-feather="link" class="header-link"></i>',
+        permalinkSymbol: '<i data-feather="link" class="link"></i>',
       })
       .use(markdownItLinkAttr, {
         // Make external links open in a new tab.

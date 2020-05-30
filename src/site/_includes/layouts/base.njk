@@ -47,22 +47,22 @@ description: Posts, projects and more by fragosti
       <header>
         <div class="flex flex-row justify-between items-center my-6">    
           <a href="/" class="block font-secondary text-2xl font-bold">fragosti</a>
-          <div data-controller="dark-mode-controller" class="header-link mt-8 mb-6">
+          <div data-controller="dark-mode-controller" class="link mt-8 mb-6">
             <i data-feather="moon" data-target="dark-mode-controller.darkToggle" class="hidden" data-action="click->dark-mode-controller#useDarkMode"></i>
             <i data-feather="sun" data-target="dark-mode-controller.lightToggle" data-action="click->dark-mode-controller#useLightMode"></i>
           </div>
         </div>
         <div class="flex flex-row justify-between py-2">
           <div class="space-x-3">
-            <a class="header-link" href="/posts">Posts</a>
-            <a class="header-link" href="/projects">Projects</a>
-            <a class="header-link" href="/about">About</a>
+            <a class="link" href="/posts">Posts</a>
+            <a class="link" href="/projects">Projects</a>
+            <a class="link" href="/about">About</a>
           </div>
           <div class="space-x-3">
-            <a class="header-link" href="mailto:francesco@fragosti.com"><i data-feather="mail"></i></a>
-            <a class="header-link" target="_blank" href="https://twitter.com/fragosti"><i data-feather="twitter"></i></a>
-            <a class="header-link" target="_blank" href="https://github.com/fragosti"><i data-feather="github"></i></a>
-            <a class="header-link" target="_blank" href="https://www.linkedin.com/in/fragosti/"><i data-feather="linkedin"></i></a>
+            <a class="link" href="mailto:francesco@fragosti.com"><i data-feather="mail"></i></a>
+            <a class="link" target="_blank" href="https://twitter.com/fragosti"><i data-feather="twitter"></i></a>
+            <a class="link" target="_blank" href="https://github.com/fragosti"><i data-feather="github"></i></a>
+            <a class="link" target="_blank" href="https://www.linkedin.com/in/fragosti/"><i data-feather="linkedin"></i></a>
           </div>
         </div>
       </header>
@@ -71,9 +71,9 @@ description: Posts, projects and more by fragosti
     <main class="py-8">{{ content | safe }}</main>
     <div class="divide-y divide-gray-500 mt-8">
       <div></div>
-      <footer class="text-gray-600 py-4 flex flex-row justify-between">
+      <footer class="text-gray-600 py-4 flex flex-row justify-between flex-wrap items-center">
         <div>© 2020 All rights reserved.</div>
-        <a class="header-link" target="_blank" href="https://fragosti.substack.com/">Subscribe to updates</a>
+        <a class="link py-2 sm:py-0" target="_blank" href="https://fragosti.substack.com/">Subscribe to updates</a>
       </footer>
     </div>
     <script>
