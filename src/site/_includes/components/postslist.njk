@@ -1,6 +1,6 @@
 <ul>
 {%- for post in collections.post | reverse | limit(postsListLimit) -%}
-  <article class="py-3">
+  <li class="py-3">
     <h3>
       <a href="{{ post.url | url }}">{{ post.data.title }}</a>
     </h3>
@@ -10,6 +10,6 @@
     <p class="line-clamp py-1"> 
       {% excerpt post %}
     </p>
-  </article>
+  </li>
 {%- endfor -%}
 </ul>
