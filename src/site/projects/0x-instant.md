@@ -16,7 +16,7 @@ genericUrl: https://blog.0xproject.com/introducing-0x-instant-7314c786d743
 I built Instant with a small team of talented engineers and designers at 0x. It has been included in many decentralized applications, and processed thousands of ETH worth of Ethereum token purchases. It is also an extremely popular at hackathons, as it is the easiest way to get up and running with crypto purchasing.
 
 <div class="flex justify-center flex-wrap items-center full-width space-x-2">
-  <img src="/assets/img/instant-dai.png" alt="Instant DAI" class="my-4"width="300px">
-  <img src="/assets/img/instant-kitty.png" alt="Instant Kitty" class="my-4"width="300px">
-  <img src="/assets/img/instant-rep.png" alt="Instant REP" class="my-4" width="300px"/>
+  <img src="/assets/img/instant-dai.png" alt="Instant DAI" class="my-4" style="width: 300px" />
+  <img src="/assets/img/instant-kitty.png" alt="Instant Kitty" class="my-4"style="width: 300px"/>
+  <img src="/assets/img/instant-rep.png" alt="Instant REP" class="my-4" style="width: 300px"/>
 </div>
