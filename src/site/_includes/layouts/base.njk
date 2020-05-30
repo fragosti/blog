@@ -1,3 +1,6 @@
+---
+description: Posts, projects and more by fragosti
+---
 <!DOCTYPE html>
 <html lang="en" class="mode-dark">
   <head>
@@ -11,6 +14,19 @@
         fragosti
       {% endif %}
     </title>
+    <meta name="description" content="{{ description }}"/>
+    <meta name="author" content="Francesco Agosti">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:url" content="https://fragosti.com{{ page.url }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:description" content="{{ description }}" />
+    <meta name="twitter:url" content="https://fragosti.com{{ page.url }}" />
+    <meta name="twitter:creator" content="@fragosti" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link rel="stylesheet" href="/assets/css/app.css" />
     <link rel="stylesheet" href="/assets/css/prism.css" />
