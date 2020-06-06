@@ -132,11 +132,7 @@ On the styling side, there is a plugin called [tailwindcss-dark-mode](https://gi
 const { theme, variants } = require('tailwindcss/defaultConfig')
 
 module.exports = {
-  purge: [
-    './src/assets/js/**/*.js',
-    './src/site/**/*.njk',
-    './src/site/**/*.md',
-  ],
+  purge: ['./src/assets/js/**/*.js', './src/**/*.njk', './src/**/*.md'],
   theme: {
     extend: {
       fontFamily: {
