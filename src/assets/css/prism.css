@@ -202,10 +202,10 @@ pre[class*='language-'] > code[class*='language-'] {
 }
 
 mark.highlight-line-active {
-  background-color: #2d3748;
+  background-color: rgb(2, 55, 81);
   color: #d4d4d4;
 }
 
 mark.highlight-line-active span.token {
-  background-color: #2d3748 !important;
+  background-color: rgb(2, 55, 81) !important;
 }

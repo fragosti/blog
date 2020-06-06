@@ -13,12 +13,14 @@ However, I found the API complex and confusing. While I was familiar with most o
 
 ## A Look into Eleventy
 
-Eleventy was a pleasure to work with. I know there are other great solutions out there ([Hugo](https://gohugo.io/) and [NextJS](https://nextjs.org/) come to mind), but I really didn't contract framework envy at all during this process.
+Eleventy was a pleasure to work with. I know there are other great solutions out there ([Hugo](https://gohugo.io/) and [NextJS](https://nextjs.org/) come to mind), but I really didn't have many complaints while building this blog.
 To learn more about the basics, I recommend the [tutorials](https://www.11ty.dev/docs/tutorials/) or [A Brief Tour of the Eleventy Static Site Generator](https://www.digitalocean.com/community/tutorials/js-eleventy) by Digital Ocean.
 
 > 11ty is easy to use, doesn’t get in your way and spits out exactly what you put in, so there’s no surprise or hidden code bloat. At its most basic, 11ty just compiles files it finds from your working directory into static HTML files. Plus, since it’s written in JavaScript, you gain access to the whole of npm in terms of packages you can use in your project.
 
-As a sample, here is how you implement a [collection](https://www.11ty.dev/docs/collections/) of posts in Eleventy
+As a sample, this is basically how you would implement a page showing your [collection](https://www.11ty.dev/docs/collections/) of posts in Eleventy.
+
+First you would create a `my-first-post.md` file.
 
 ```
 ---
@@ -30,6 +32,8 @@ tags: post
 
 My first blog post content.
 ```
+
+And because of the `tags` field, that post content and meta-data is available in templates to render in `collections.post`.
 
 ```html
 <ul>
@@ -53,11 +57,11 @@ What I like about Eleventy is that it comes with sane defaults, and that the "gu
 
 ## The Stack
 
-Eleventy provides the skeleton for creating a blog, but doesn't have opinions on styling, bundling etc...
+Eleventy provides the skeleton for creating a blog, but doesn't have opinions on styling, bundling, etc...
 
-For styling I used [Tailwind CSS](https://tailwindcss.com/) with custom fonts, and a variant for dark-mode. This kept the custom styles I had to write in the project to a minimum.
+For styling I used [Tailwind CSS](https://tailwindcss.com/) with custom fonts, and a variant for [dark-mode](/posts/how-this-blog-is-made/#dark-and-light-mode). This kept the custom styles I had to write in the project to a minimum.
 
-For the bundler, I opted for [ParcelJS](https://parceljs.org/). While Eleventy takes care of processing the markdown and HTML, Parcel takes care of processing the Javascript, CSS and even [minifies and optimizes my images](https://github.com/DeMoorJasper/parcel-plugin-imagemin).
+For the bundler, I opted for [ParcelJS](https://parceljs.org/). While Eleventy takes care of processing the markdown and HTML, Parcel takes care of processing the Javascript, CSS and even [minifies and optimizes my images](/posts/how-this-blog-is-made/#image-optimization-and-lazy-loading).
 
 Finally, for the little custom Javascript on the site, I used [Stimulus](https://stimulusjs.org/) (created by the folks at Basecamp). I can't say that it was a concious choice – it was what came by default in the starter, and worked well enough.
 
@@ -302,7 +306,7 @@ At some point while working with markdown files in Eleventy you may find that yo
 
 While there may be a lot of ways you want to configure your markdown parser, I'm going to go over how I implemented perma-links for my headings, and how I automatically made external links open in a new tab.
 
-Perma-links, which you can check out by hovering over the any heading, were added by using [markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor) and the "link" icon from [feather-icons](http://feathericons.com/). Simply enable the `permalink` option and set the `permalinkSymbol` to the icon of your choice.
+Perma-links, which you can check out by hovering over any heading, were added by using [markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor) and the "link" icon from [feather-icons](http://feathericons.com/). Simply enable the `permalink` option and set the `permalinkSymbol` to the icon of your choice.
 
 To ensure external links open in a new tab, I used [markdown-it-link-attributes](https://github.com/crookedneighbor/markdown-it-link-attributes), which lets you apply attributes to links meeting a certain criteria. In my case, I made sure to add `target=_blank` and `rel: noopener noreferrer` to all links with absolute URLs, since I only use relative URLs for internal links.
 
@@ -332,6 +336,6 @@ eleventyConfig.setLibrary(
 
 ## Conclusion
 
-As you can see Eleventy provides a simple and elegant solution for those wanting to build a static blog. It's easy to get started, and at least in my experience, had an answer for every feature I asked of it, either in the form of documentation or a plugin.
+As you can see Eleventy provides a simple and elegant solution for those wanting to build a static blog. It's easy to get started, and in my experience, it provided solutions to all problems I wanted to solve while developing, either in the form of documentation or a plugin.
 
 I'm sure things will continue to evolve, but I hope this post is helpful to people implementing the same sorts of features I wanted for this site that aren't exactly covered by the main Eleventy docs.
