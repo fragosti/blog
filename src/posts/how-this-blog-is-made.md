@@ -1,25 +1,24 @@
 ---
 layout: post.njk
-title: How This Blog is Implemented
+title: How This Blog is Made
 date: 2020-06-01
 tags: post
 ---
 
-No blog would be complete without a post about its implementation.
+No blog would be complete without a post about its implementation. Long story short, this blog is implemented using [Eleventy](https://www.11ty.dev/), specifically by using [eleventy-starter](https://github.com/eastslopestudio/eleventy-starter) as a starting point.
 
-Long story short, this blog is implemented using [[Eleventy]], specifically by using [eleventy-starter](https://github.com/eastslopestudio/eleventy-starter) as a starting point.
+Before landing and settling on Eleventy I checked out the extremely popular [Gatsby](https://www.gatsbyjs.org/). As someone accustomed to React and Typescript it seemed like the natural choice. Going through the docs was easy enough, and I even [found a theme](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog) that I ended up mostly keeping for the final implementation.
 
-Before landing and settling on [[Eleventy]] I checked out the extremely popular [[Gatsby]]. As someone accustomed to React and Typescript it seemed like the natural choice. Going through the docs was easy enough, and I even [found a theme](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog) that I ended up mostly keeping for the final implementation.
-However, I found the API complex and confusing. While I was familiar with most of the frameworks used, I couldn't wrap my head around how it all fit together. In particular, implementing a simple collection of posts took way too much ceremony and involved a [[GraphQL]] API. While I love [[GraphQL]], it all seemed overkill to me, and so I gravitated towards [[Eleventy]] because it seemed like the simplest tool for the job.
+However, I found the API complex and confusing. While I was familiar with most of the frameworks used, I couldn't wrap my head around how it all fit together. In particular, implementing a simple collection of posts took way too much ceremony and involved a [GraphQL](https://graphql.org/) API. While I love GraphQL, it all seemed overkill to me, and so I gravitated towards Eleventy because it seemed like the simplest tool for the job.
 
 ## A Look into Eleventy
 
-Eleventy was a pleasure to work with. I know there are other great solutions out there ([[Hugo]] and [[NextJS]] come to mind), but I really didn't contract framework envy at all during this process.
-To learn more about the basics, I recommend the [tutorials](https://www.11ty.dev/docs/tutorials/) or [A Brief Tour of the Eleventy Static Site Generator](https://www.digitalocean.com/community/tutorials/js-eleventy) by [[Digital Ocean]].
+Eleventy was a pleasure to work with. I know there are other great solutions out there ([Hugo](https://gohugo.io/) and [NextJS](https://nextjs.org/) come to mind), but I really didn't contract framework envy at all during this process.
+To learn more about the basics, I recommend the [tutorials](https://www.11ty.dev/docs/tutorials/) or [A Brief Tour of the Eleventy Static Site Generator](https://www.digitalocean.com/community/tutorials/js-eleventy) by Digital Ocean.
 
 > 11ty is easy to use, doesn’t get in your way and spits out exactly what you put in, so there’s no surprise or hidden code bloat. At its most basic, 11ty just compiles files it finds from your working directory into static HTML files. Plus, since it’s written in JavaScript, you gain access to the whole of npm in terms of packages you can use in your project.
 
-As a sample, here is how you implement a [collection](https://www.11ty.dev/docs/collections/) of posts in [[Eleventy]]
+As a sample, here is how you implement a [collection](https://www.11ty.dev/docs/collections/) of posts in Eleventy
 
 ```
 ---
@@ -50,15 +49,22 @@ My first blog post content.
 </ul>
 ```
 
-What I like about [[Eleventy]] is that it comes with sane defaults, and that the "guts" of the blog are taken care of for you.
+What I like about Eleventy is that it comes with sane defaults, and that the "guts" of the blog are taken care of for you.
 
 ## The Stack
 
-Similarly to [[Jekyll]], [[Eleventy]] provides the skeleton for creating a blog, but doesn't have opinions on styling, bundling etc...
-For styling I used [[Tailwind CSS]] with custom fonts, and a variant for dark-mode. This kept the custom styles I had to write in the project to a minimum.
-For the bundler, I opted for [[ParcelJS]]. While [[Eleventy]] takes care of processing the markdown and html, Parcel takes care of processing the Javascript, CSS and even [minifies and optimizes my images](https://github.com/DeMoorJasper/parcel-plugin-imagemin).
-Finally, for the little custom Javascript on the site, I used [[Stimulus]] (created by the folks at [[Basecamp]]). I can't say that it was a concious choice – it was what came by default in the starter, and worked well enough. The starter now uses [[AlpineJS]] for what it's worth. [[Turbolinks]] is in the mix as well.
-All this is deployed to [[Netlify]]! The few icons you see are all from [[Feather Icons]].
+Eleventy provides the skeleton for creating a blog, but doesn't have opinions on styling, bundling etc...
+
+For styling I used [Tailwind CSS](https://tailwindcss.com/) with custom fonts, and a variant for dark-mode. This kept the custom styles I had to write in the project to a minimum.
+
+For the bundler, I opted for [ParcelJS](https://parceljs.org/). While Eleventy takes care of processing the markdown and HTML, Parcel takes care of processing the Javascript, CSS and even [minifies and optimizes my images](https://github.com/DeMoorJasper/parcel-plugin-imagemin).
+
+Finally, for the little custom Javascript on the site, I used [Stimulus](https://stimulusjs.org/) (created by the folks at Basecamp). I can't say that it was a concious choice – it was what came by default in the starter, and worked well enough.
+
+[Turbolinks](https://github.com/turbolinks/turbolinks) is in the mix as well.
+
+All this is deployed to [Netlify](https://www.netlify.com/)! The few icons you see are all from [Feather Icons](http://feathericons.com/).
+
 Even when going deeper with Eleventy, and trying to implement more custom functionality, I've found I can get things done relatively quickly. Below are some examples.
 
 ## Creating "Components"
@@ -67,7 +73,7 @@ If you're used to writing React, you're familiar with creating "components". Thi
 While I've seen a few approaches, I ended up using the one I found most prominently used in the official [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog/).
 The gist is to create [partial templates](https://rphunt.github.io/eleventy-walkthrough/partials-and-include.html), and include them in full pages or layouts. We saw an example of a partial template earlier. This time around, you may notice that the template depends on an external variable `postsListLimit`, which will limit the number of posts rendered when available.
 
-```html
+```html/1
 <ul>
   {%- for post in collections.post | reverse | limit(postsListLimit) -%}
   <li class="py-3">
@@ -98,7 +104,7 @@ eleventyConfig.addFilter('limit', function(array, limit) {
 
 Using your partial template, and defining `postsListLimit`, can be seen below.
 
-```html
+```html/7
 <div class="divide-y divide-gray-500 mb-5 mt-8">
   <div class="flex flex-row justify-between py-2">
     <h2>Latest Posts</h2>
@@ -106,19 +112,19 @@ Using your partial template, and defining `postsListLimit`, can be seen below.
   </div>
   <div></div>
 </div>
-{% set postsListLimit = 3 %} {% include "components/postslist.njk" %}
+{% set postsListLimit = 3 %} {% include "postslist.njk" %}
 ```
 
 As long as your partials are in your `_includes` [directory](https://www.11ty.dev/docs/config/#directory-for-includes), you'll be able to import them.
 This **feels** close enough to importing a React component and rendering it with props.
 
-## Dark/Light Mode
+## Dark and Light Mode
 
-A feature you see almost everywhere nowadays is the ability to switch between dark and light mode. While [[Tailwind CSS]] provides an example of [implementing dark mode with a media query](https://tailwindcss.com/docs/breakpoints/#dark-mode) for browsers and operating systems that support it, I wanted to create a simple toggle (the moon or sun icon in the upper right corner of this blog).
+A feature you see almost everywhere nowadays is the ability to switch between dark and light mode. While Tailwind CSS provides an example of [implementing dark mode with a media query](https://tailwindcss.com/docs/breakpoints/#dark-mode) for browsers and operating systems that support it, I wanted to create a simple toggle (the moon or sun icon in the upper right corner of this blog).
 
 On the styling side, there is a plugin called [tailwindcss-dark-mode](https://github.com/ChanceArthur/tailwindcss-dark-mode) that does a lot of the heavy lifting for you. These are the relevant parts of my `tailwind.config.js`.
 
-```js
+```js/16-21
 const { theme, variants } = require('tailwindcss/defaultConfig')
 
 module.exports = {
@@ -144,7 +150,7 @@ module.exports = {
 }
 ```
 
-The `variants` section tells [[Tailwind CSS]] to create `dark` and `dark-hover` utility classes for border, text and background colors, which is all I need.
+The `variants` section tells Tailwind CSS to create `dark` and `dark-hover` utility classes for border, text and background colors, which is all I need.
 As you might expect, the `plugins` section imports and uses the plugin.
 What this means is that you can apply CSS class names such as `dark:bg-gray-900` or in my case, write CSS like this.
 
@@ -178,7 +184,7 @@ What this means is that you can apply CSS class names such as `dark:bg-gray-900`
 ```
 
 That `.mode-dark` CSS class is the default class used by [tailwindcss-dark-mode](https://github.com/ChanceArthur/tailwindcss-dark-mode), but how does that class get added to your `<html>` element? That is entirely up to you.
-In my case, I went ahead and implemented it in [[Stimulus]]. The controller is a simple class that allows you to toggle dark mode on and off. It also persists the state to `localStorage`, so that you can maintain the same mode across sessions.
+In my case, I went ahead and implemented it in Stimulus. The controller is a simple class that allows you to toggle dark mode on and off. It also persists the state to `localStorage`, so that you can maintain the same mode across sessions.
 
 ```js
 import { Controller } from 'stimulus'
@@ -225,7 +231,7 @@ The corresponding HTML is:
 </div>
 ```
 
-And don't forget to initialize [[Stimulus]]
+And don't forget to initialize Stimulus
 
 ```js
 import { Application } from 'stimulus'
@@ -238,7 +244,7 @@ application.register('dark-mode-controller', DarkModeController)
 
 ## Image Optimization and Lazy-Loading
 
-Turns out images are whole thing. You can spend a lot of time creating a system that optimizes and re-sizes your images and makes sure that the right image dimensions are served to the right devices. [[Eleventy]] even [has an official plugin](https://github.com/11ty/eleventy-img) to do this.
+Turns out images are whole thing. You can spend a lot of time creating a system that optimizes and re-sizes your images and makes sure that the right image dimensions are served to the right devices. Eleventy even [has an official plugin](https://github.com/11ty/eleventy-img) to do this.
 
 In this regard my goals were a bit different:
 
@@ -247,7 +253,7 @@ In this regard my goals were a bit different:
 - To have decent performance and UX.
 
 Given these goals, what I'm about to describe may not be the ultimate cutting edge best practice, but it works for me.
-The first and easiest step is to make sure your images are optimized and compressed, even if they are the same dimensions. For this, all I needed to do was use https://github.com/DeMoorJasper/parcel-plugin-imagemin which allows [[ParcelJS]] to apply those optimizations during the build. I found that this alone reduced the size of my images by 80% for free.
+The first and easiest step is to make sure your images are optimized and compressed, even if they are the same dimensions. For this, all I needed to do was use [parcel-plugin-imagemin](https://github.com/DeMoorJasper/parcel-plugin-imagemin) which allows ParcelJS to apply those optimizations during the build. I found that this alone reduced the size of my images by 80% for free.
 
 ```bash
   7:39:10 PM: \$ cross-env NODE\*ENV=production parcel build ./src/assets/\*\*/\_ --out-dir ./dist/assets --no-source-maps
@@ -292,9 +298,12 @@ I found that using these two plugins, along with being smart about which images 
 
 ## Markdown Plugins
 
-At some point while working with markdown files in [[Eleventy]] you may find that you want some custom behavior. Fortunately, [this is supported](https://www.11ty.dev/docs/languages/markdown/), as [[Eleventy]] allows you to add and configure your own `markdown-it` instance.
+At some point while working with markdown files in Eleventy you may find that you want some custom behavior. Fortunately, [this is supported](https://www.11ty.dev/docs/languages/markdown/), as Eleventy allows you to add and configure your own `markdown-it` instance.
+
 While there may be a lot of ways you want to configure your markdown parser, I'm going to go over how I implemented perma-links for my headings, and how I automatically made external links open in a new tab.
+
 Perma-links, which you can check out by hovering over the any heading, were added by using [markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor) and the "link" icon from [feather-icons](http://feathericons.com/). Simply enable the `permalink` option and set the `permalinkSymbol` to the icon of your choice.
+
 To ensure external links open in a new tab, I used [markdown-it-link-attributes](https://github.com/crookedneighbor/markdown-it-link-attributes), which lets you apply attributes to links meeting a certain criteria. In my case, I made sure to add `target=_blank` and `rel: noopener noreferrer` to all links with absolute URLs, since I only use relative URLs for internal links.
 
 ```js
@@ -323,6 +332,6 @@ eleventyConfig.setLibrary(
 
 ## Conclusion
 
-As you can see [[Eleventy]] provides a simple and elegant solution for those wanting to build a static blog. It's easy to get started, and at least in my experience, had an answer for every feature I asked of it, either in the form of documentation or a plugin.
+As you can see Eleventy provides a simple and elegant solution for those wanting to build a static blog. It's easy to get started, and at least in my experience, had an answer for every feature I asked of it, either in the form of documentation or a plugin.
 
-I'm sure things will continue to evolve, but I hope this post is helpful to people implementing the same sorts of features I wanted for this site that aren't exactly covered by the main [[Eleventy]] docs.
+I'm sure things will continue to evolve, but I hope this post is helpful to people implementing the same sorts of features I wanted for this site that aren't exactly covered by the main Eleventy docs.
