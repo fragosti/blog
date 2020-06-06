@@ -88,7 +88,7 @@ module.exports = function(eleventyConfig) {
    * @link https://www.11ty.io/docs/config/#transforms
    */
   if (process.env.ELEVENTY_ENV === 'production') {
-    eleventyConfig.addTransform('htmlmin', require('./src/utils/htmlmin.js'))
+    eleventyConfig.addTransform('htmlmin', require('./utils/htmlmin.js'))
   }
 
   /**
@@ -160,13 +160,14 @@ module.exports = function(eleventyConfig) {
 
   return {
     dir: {
-      layouts: '_includes/layouts',
-      input: 'src/site',
+      input: 'src',
       output: 'dist',
+      layouts: 'layouts',
+      includes: 'includes',
     },
     passthroughFileCopy: true,
     templateFormats: ['njk', 'md'],
     htmlTemplateEngine: 'njk',
-    markdownTemplateEngine: 'njk',
+    markdownTemplateEngine: false,
   }
 }
