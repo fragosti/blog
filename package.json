@@ -26,7 +26,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@babel/core": "^7.8.4",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-env": "^7.10.2",
     "cross-env": "^6.0.3",
     "eleventy-plugin-lazyimages": "^1.1.2",
     "eleventy-plugin-typeset": "github:liamfiddler/eleventy-plugin-typeset",
