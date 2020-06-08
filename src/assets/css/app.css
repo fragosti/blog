@@ -8,10 +8,18 @@ h1 {
   @apply text-5xl font-bold font-primary leading-none;
 }
 h2 {
-  @apply text-2xl font-semibold font-primary pt-2;
+  @apply text-2xl font-semibold font-primary;
 }
 h3 {
-  @apply text-xl font-secondary font-semibold text-gray-800 pt-2;
+  @apply text-xl font-secondary font-semibold text-gray-800;
+}
+.md {
+  h2 {
+    @apply pt-2;
+  }
+  h3 {
+    @apply pt-1;
+  }
 }
 p {
   @apply text-gray-800 leading-relaxed;
@@ -24,6 +32,16 @@ label {
 }
 .link {
   @apply text-gray-600 font-primary cursor-pointer;
+}
+ul,
+ol {
+  @apply pl-4 text-gray-800;
+}
+ul {
+  @apply list-disc;
+}
+ol {
+  @apply list-decimal;
 }
 .link:hover {
   @apply underline text-black;
@@ -68,6 +86,10 @@ img:not(.rounded-full) {
     @apply text-white;
   }
   p {
+    @apply text-gray-400;
+  }
+  ul,
+  ol {
     @apply text-gray-400;
   }
   p a {
