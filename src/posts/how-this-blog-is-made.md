@@ -254,7 +254,7 @@ In this regard my goals were a bit different:
 - To have decent performance and UX.
 
 Given these goals, what I'm about to describe may not be the ultimate cutting edge best practice, but it works for me.
-The first and easiest step is to make sure your images are optimized and compressed, even if they are the same dimensions when they come out the other end. For this, all I needed to do was use [parcel-plugin-imagemin](https://github.com/DeMoorJasper/parcel-plugin-imagemin) which allows ParcelJS to apply those optimizations during the build. I found that this alone reduced the size of my images by 80% for free.
+The first and easiest step is to make sure your images are optimized and compressed, even if they are the same dimensions when they come out the other end. For this, I used [parcel-plugin-imagemin](https://github.com/DeMoorJasper/parcel-plugin-imagemin) which allows ParcelJS to apply those optimizations during the build. I found that this alone reduced the size of my images by 80% for free.
 
 ```bash
 7:39:10 PM: \$ cross-env NODE\*ENV=production parcel build ./src/assets/\*\*/\_ --out-dir ./dist/assets --no-source-maps
@@ -281,7 +281,7 @@ The first and easiest step is to make sure your images are optimized and compres
 7:39:34 PM: dist/assets/img/just-a-level.png 391 B 926ms
 ```
 
-The second step I took was to use [eleventy-plugin-lazyimages](https://github.com/liamfiddler/eleventy-plugin-lazyimages#readme). This plugin scans your markup for `<image>` tags, seeds them with inline low-res images, and loads the full resolution images once the image is near the viewport. The result is HTML like the following:
+The second step I took was to use [eleventy-plugin-lazyimages](https://github.com/liamfiddler/eleventy-plugin-lazyimages#readme). This plugin scans your markup for `<img>` tags, seeds them with inline low-res images, and loads the full resolution images once the image is near the viewport. The result is HTML like the following:
 
 ```html
 <img
@@ -305,7 +305,7 @@ While there may be a lot of ways you want to configure your markdown parser, I'm
 
 Perma-links, which you can check out by hovering over any heading, were added by using [markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor) and the "link" icon from [feather-icons](http://feathericons.com/). Simply enable the `permalink` option and set the `permalinkSymbol` to the icon of your choice.
 
-To ensure external links open in a new tab, I used [markdown-it-link-attributes](https://github.com/crookedneighbor/markdown-it-link-attributes), which lets you apply attributes to links meeting a certain criteria. In my case, I made sure to add `target=_blank` and `rel: noopener noreferrer` to all links with absolute URLs, since I only use relative URLs for internal links.
+To ensure external links open in a new tab, I used [markdown-it-link-attributes](https://github.com/crookedneighbor/markdown-it-link-attributes), which lets you apply attributes to links meeting a certain criteria. In my case, I made sure to add `target=_blank` and `rel= noopener noreferrer` to all links with absolute URLs, since I only use relative URLs for internal links.
 
 ```js
 /**
