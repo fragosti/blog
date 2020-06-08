@@ -128,7 +128,7 @@ A feature you see almost everywhere nowadays is the ability to switch between da
 
 On the styling side, there is a plugin called [tailwindcss-dark-mode](https://github.com/ChanceArthur/tailwindcss-dark-mode) that does a lot of the heavy lifting for you. These are the relevant parts of my `tailwind.config.js`.
 
-```js/16-21
+```js/12-21
 const { theme, variants } = require('tailwindcss/defaultConfig')
 
 module.exports = {
