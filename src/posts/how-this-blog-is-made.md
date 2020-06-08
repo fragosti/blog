@@ -98,7 +98,7 @@ The gist is to create [partial templates](https://rphunt.github.io/eleventy-walk
 The `limit` [filter](https://www.11ty.dev/docs/filters/) is available below.
 
 ```js
-eleventyConfig.addFilter('limit', function(array, limit) {
+eleventyConfig.addFilter('limit', function (array, limit) {
   if (!limit) {
     return array
   }
@@ -253,31 +253,31 @@ In this regard my goals were a bit different:
 - To have decent performance and UX.
 
 Given these goals, what I'm about to describe may not be the ultimate cutting edge best practice, but it works for me.
-The first and easiest step is to make sure your images are optimized and compressed, even if they are the same dimensions. For this, all I needed to do was use [parcel-plugin-imagemin](https://github.com/DeMoorJasper/parcel-plugin-imagemin) which allows ParcelJS to apply those optimizations during the build. I found that this alone reduced the size of my images by 80% for free.
+The first and easiest step is to make sure your images are optimized and compressed, even if they are the same dimensions when they come out the other end. For this, all I needed to do was use [parcel-plugin-imagemin](https://github.com/DeMoorJasper/parcel-plugin-imagemin) which allows ParcelJS to apply those optimizations during the build. I found that this alone reduced the size of my images by 80% for free.
 
 ```bash
-  7:39:10 PM: \$ cross-env NODE\*ENV=production parcel build ./src/assets/\*\*/\_ --out-dir ./dist/assets --no-source-maps
-  7:39:11 PM:
-  7:39:34 PM: ✨ Built in 23.57s.
-  7:39:34 PM: dist/assets/img/yelp-search-home.png 432.99 KB 22.31s
-  7:39:34 PM: dist/assets/img/codenail-framed-poster.jpeg 347.73 KB 18.52s
-  7:39:34 PM: dist/assets/img/yelp-search-ios.jpg 186.6 KB 16.85s
-  7:39:34 PM: dist/assets/img/yelp-nearby-ios.jpg 156.13 KB 16.42s
-  7:39:34 PM: dist/assets/js/app.js 80.55 KB 21.05s
-  7:39:34 PM: dist/assets/img/instant-kitty.png 42.58 KB 3.23s
-  7:39:34 PM: dist/assets/img/renderproxy-landing.png 32.99 KB 13.61s
-  7:39:34 PM: dist/assets/img/instant-dai.png 22.86 KB 2.92s
-  7:39:34 PM: dist/assets/img/0x-api-big.png 22.62 KB 13.54s
-  7:39:34 PM: dist/assets/img/instant-rep.png 21.34 KB 3.02s
-  7:39:34 PM: dist/assets/img/0x-api-banner.png 11.96 KB 3.32s
-  7:39:34 PM: dist/assets/css/app.css 8.47 KB 18.61s
-  7:39:34 PM: dist/assets/img/renderproxy.png 4.85 KB 3.02s
-  7:39:34 PM: dist/assets/img/0x-api.png 4.67 KB 1.42s
-  7:39:34 PM: dist/assets/css/prism.css 2.32 KB 18.62s
-  7:39:34 PM: dist/assets/img/codenail.png 1.56 KB 933ms
-  7:39:34 PM: dist/assets/img/yelp.png 1.03 KB 1.14s
-  7:39:34 PM: dist/assets/img/0x.svg 887 B 737ms
-  7:39:34 PM: dist/assets/img/just-a-level.png 391 B 926ms
+7:39:10 PM: \$ cross-env NODE\*ENV=production parcel build ./src/assets/\*\*/\_ --out-dir ./dist/assets --no-source-maps
+7:39:11 PM:
+7:39:34 PM: ✨ Built in 23.57s.
+7:39:34 PM: dist/assets/img/yelp-search-home.png 432.99 KB 22.31s
+7:39:34 PM: dist/assets/img/codenail-framed-poster.jpeg 347.73 KB 18.52s
+7:39:34 PM: dist/assets/img/yelp-search-ios.jpg 186.6 KB 16.85s
+7:39:34 PM: dist/assets/img/yelp-nearby-ios.jpg 156.13 KB 16.42s
+7:39:34 PM: dist/assets/js/app.js 80.55 KB 21.05s
+7:39:34 PM: dist/assets/img/instant-kitty.png 42.58 KB 3.23s
+7:39:34 PM: dist/assets/img/renderproxy-landing.png 32.99 KB 13.61s
+7:39:34 PM: dist/assets/img/instant-dai.png 22.86 KB 2.92s
+7:39:34 PM: dist/assets/img/0x-api-big.png 22.62 KB 13.54s
+7:39:34 PM: dist/assets/img/instant-rep.png 21.34 KB 3.02s
+7:39:34 PM: dist/assets/img/0x-api-banner.png 11.96 KB 3.32s
+7:39:34 PM: dist/assets/css/app.css 8.47 KB 18.61s
+7:39:34 PM: dist/assets/img/renderproxy.png 4.85 KB 3.02s
+7:39:34 PM: dist/assets/img/0x-api.png 4.67 KB 1.42s
+7:39:34 PM: dist/assets/css/prism.css 2.32 KB 18.62s
+7:39:34 PM: dist/assets/img/codenail.png 1.56 KB 933ms
+7:39:34 PM: dist/assets/img/yelp.png 1.03 KB 1.14s
+7:39:34 PM: dist/assets/img/0x.svg 887 B 737ms
+7:39:34 PM: dist/assets/img/just-a-level.png 391 B 926ms
 ```
 
 The second step I took was to use [eleventy-plugin-lazyimages](https://github.com/liamfiddler/eleventy-plugin-lazyimages#readme). This plugin scans your markup for `<image>` tags, seeds them with inline low-res images, and loads the full resolution images once the image is near the viewport. The result is HTML like the following:

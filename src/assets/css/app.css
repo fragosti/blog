@@ -8,10 +8,10 @@ h1 {
   @apply text-5xl font-bold font-primary leading-none;
 }
 h2 {
-  @apply text-2xl font-semibold font-primary;
+  @apply text-2xl font-semibold font-primary pt-2;
 }
 h3 {
-  @apply text-xl font-secondary font-semibold text-gray-800;
+  @apply text-xl font-secondary font-semibold text-gray-800 pt-2;
 }
 p {
   @apply text-gray-800 leading-relaxed;
