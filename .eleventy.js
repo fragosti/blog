@@ -7,8 +7,9 @@ const markdownItLinkAttr = require('markdown-it-link-attributes')
 const markdownItAnchor = require('markdown-it-anchor')
 const typesetPlugin = require('eleventy-plugin-typeset')
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages')
+const pluginRss = require('@11ty/eleventy-plugin-rss')
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   /**
    * Opts in to a full deep merge when combining the Data Cascade.
    *
@@ -35,11 +36,11 @@ module.exports = function(eleventyConfig) {
    *
    * @link https://www.11ty.io/docs/filters/
    */
-  eleventyConfig.addFilter('dateReadable', date => {
+  eleventyConfig.addFilter('dateReadable', (date) => {
     return moment(date).format('LL')
   })
 
-  eleventyConfig.addFilter('limit', function(array, limit) {
+  eleventyConfig.addFilter('limit', function (array, limit) {
     if (!limit) {
       return array
     }
@@ -51,7 +52,7 @@ module.exports = function(eleventyConfig) {
    *
    * @link https://www.11ty.io/docs/shortcodes/
    */
-  eleventyConfig.addShortcode('excerpt', article => {
+  eleventyConfig.addShortcode('excerpt', (article) => {
     if (!article.hasOwnProperty('templateContent')) {
       console.warn(
         'Failed to extract excerpt: Document has no property "templateContent".'
@@ -68,7 +69,7 @@ module.exports = function(eleventyConfig) {
       { start: '<p>', end: '</p>' },
     ]
 
-    separatorsList.some(separators => {
+    separatorsList.some((separators) => {
       const startPosition = content.indexOf(separators.start)
       const endPosition = content.indexOf(separators.end)
 
@@ -101,14 +102,14 @@ module.exports = function(eleventyConfig) {
     snippetOptions: {
       rule: {
         match: /<\/head>/i,
-        fn: function(snippet, match) {
+        fn: function (snippet, match) {
           return snippet + match
         },
       },
     },
     // Set local server 404 fallback
     callbacks: {
-      ready: function(err, browserSync) {
+      ready: function (err, browserSync) {
         const content_404 = fs.readFileSync('dist/404/index.html')
 
         browserSync.addMiddleware('*', (req, res) => {
@@ -155,8 +156,9 @@ module.exports = function(eleventyConfig) {
   })
   eleventyConfig.addPlugin(typesetPlugin())
   eleventyConfig.addPlugin(lazyImagesPlugin, {
-    transformImgPath: imgPath => `./src${imgPath}`,
+    transformImgPath: (imgPath) => `./src${imgPath}`,
   })
+  eleventyConfig.addPlugin(pluginRss)
 
   return {
     dir: {
