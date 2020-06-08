@@ -1,6 +1,7 @@
 ---
 layout: post.njk
 title: How This Blog is Made
+description: Building a Statically Generated Blog with Eleventy
 date: 2020-06-01
 tags: post
 ---
