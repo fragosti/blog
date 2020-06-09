@@ -6,7 +6,7 @@ date: 2020-06-01
 tags: post
 ---
 
-Long story short, this blog is implemented using [Eleventy](https://www.11ty.dev/), specifically by using [eleventy-starter](https://github.com/eastslopestudio/eleventy-starter) as a starting point.
+Long story short, this blog is implemented using [Eleventy](https://www.11ty.dev/), specifically by using [eleventy-starter](https://github.com/eastslopestudio/eleventy-starter) as a starting point. Feel free to check out [the code](https://github.com/fragosti/blog).
 
 Before landing and settling on Eleventy I checked out the extremely popular [Gatsby](https://www.gatsbyjs.org/). As someone accustomed to React and Typescript it seemed like the natural choice. Going through the docs was easy enough, and I even [found a theme](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog) that I ended up mostly keeping for the final implementation.
 
