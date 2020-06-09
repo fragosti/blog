@@ -6,7 +6,7 @@ date: 2020-06-01
 tags: post
 ---
 
-No blog would be complete without a post about its implementation. Long story short, this blog is implemented using [Eleventy](https://www.11ty.dev/), specifically by using [eleventy-starter](https://github.com/eastslopestudio/eleventy-starter) as a starting point.
+Long story short, this blog is implemented using [Eleventy](https://www.11ty.dev/), specifically by using [eleventy-starter](https://github.com/eastslopestudio/eleventy-starter) as a starting point.
 
 Before landing and settling on Eleventy I checked out the extremely popular [Gatsby](https://www.gatsbyjs.org/). As someone accustomed to React and Typescript it seemed like the natural choice. Going through the docs was easy enough, and I even [found a theme](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog) that I ended up mostly keeping for the final implementation.
 
@@ -331,8 +331,59 @@ eleventyConfig.setLibrary(
 )
 ```
 
+## Email Updates Using RSS
+
+If you look at the bottom of this page, you'll notice a subscription form. This feature is implemented by using a combination of [eleventy-plugin-rss](https://www.11ty.dev/docs/plugins/rss/) to automatically generate an RSS [feed.xml](/feed.xml) file and [Mailchimp](https://mailchimp.com/help/share-your-blog-posts-with-mailchimp/).
+
+Using the plugin, you can easily add RSS to your site by adding a `feed.njk` file to the root of your blog. Here is mine:
+
+```html
+---json
+{
+  "permalink": "feed.xml",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "fragosti",
+    "description": "Posts, projects and more by fragosti",
+    "url": "https://fragosti.com/",
+    "feedUrl": "https://fragosti.com/feed.xml",
+    "author": {
+      "name": "Francesco Agosti",
+      "email": "francesco@fragosti.com"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.description }}</subtitle>
+  <link href="{{ metadata.feedUrl }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ collections.post | rssLastUpdatedDate }}</updated>
+  <id>{{ metadata.url }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {%- for post in collections.post %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | rssDate }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <description>{{ post.data.description }}</description>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>
+```
+
+Once you have that, Mailchimp and other marketing platforms offer services that will convert updates to your RSS feed to email updates for your subscribers. This is nice because you don't have to cross-post, or write a complex integration every time you want to release a post. The only thing you need to implement is the email itself, and for that Mailchimp provides [RSS Merge Tags](https://mailchimp.com/help/rss-merge-tags/), meaning you can easily include your blog title and content in your emails. As soon as you write a new blog post and deploy it, Mailchimp will pick it up and send out the email.
+
 ## Conclusion
 
 As you can see Eleventy provides a simple and elegant solution for those wanting to build a static blog. It's easy to get started, and in my experience, it provided solutions to all problems I wanted to solve while developing, either in the form of documentation or a plugin.
 
-I'm sure things will continue to evolve, but I hope this post is helpful to people implementing the same sorts of features I wanted for this site that aren't exactly covered by the main Eleventy docs.
+I'm sure things will continue to evolve, but I hope this post is helpful to people implementing features that aren't exactly covered by the main Eleventy docs.
