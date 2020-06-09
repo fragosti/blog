@@ -1,8 +1,10 @@
 ---
 layout: base.njk
+enableComments: true
 ---
 <h1 class="mb-3">{{ title }}</h1>
 <label class="mb-6">{{ date | dateReadable }}</label>
 <article class="space-y-5 md">
   {{ content | safe }}
 </article>
+                            

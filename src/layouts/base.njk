@@ -71,31 +71,49 @@ description: Posts, projects and more by fragosti
     <main class="py-8">{{ content | safe }}</main>
     <div class="divide-y divide-gray-500 mt-8">
       <div></div>
-        <footer class="text-gray-600 py-4 flex flex-row justify-center sm:justify-between flex-wrap-reverse items-center">
-          <div>© 2020 All rights reserved.</div>
-          <form action="https://fragosti.us10.list-manage.com/subscribe/post?u=19aebc17c023a0b14dd99e7af&amp;id=aac894cef7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="flex flex-row flex-no-wrap mb-4 sm:mb-0 ml-2" target="_blank" novalidate>
-            <input 
-              class="bg-white text-gray-800 dark:text-gray-400 dark:bg-gray-800 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none leading-normal" 
-              id="mce-EMAIL" placeholder="email address"
-              type="email" 
-              value="" 
-              name="EMAIL" 
-              required
-            >
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_19aebc17c023a0b14dd99e7af_aac894cef7" tabindex="-1" value=""></div>
-            <input 
-              class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 ml-2 border border-gray-400 rounded shadow cursor-pointer"
-              type="submit" 
-              value="Subscribe" 
-              name="subscribe" 
-              id="mc-embedded-subscribe">
-          </form>
+      <footer class="text-gray-600 py-4 flex flex-row justify-center sm:justify-between flex-wrap-reverse items-center">
+        <div>© 2020 All rights reserved.</div>
+        <form action="https://fragosti.us10.list-manage.com/subscribe/post?u=19aebc17c023a0b14dd99e7af&amp;id=aac894cef7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="flex flex-row flex-no-wrap mb-4 sm:mb-0 ml-2" target="_blank" novalidate>
+          <input 
+            class="bg-white text-gray-800 dark:text-gray-400 dark:bg-gray-800 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none leading-normal" 
+            id="mce-EMAIL" placeholder="email address"
+            type="email" 
+            value="" 
+            name="EMAIL" 
+            required
+          >
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_19aebc17c023a0b14dd99e7af_aac894cef7" tabindex="-1" value=""></div>
+          <input 
+            class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 ml-2 border border-gray-400 rounded shadow cursor-pointer"
+            type="submit" 
+            value="Subscribe" 
+            name="subscribe" 
+            id="mc-embedded-subscribe">
+        </form>
       </footer>
     </div>
     <script>
       feather.replace({ class: 'inline-block' })
     </script>
+    {% if enableComments %}
+      <div class="divide-y divide-gray-500">
+        <div></div>
+        <div class="pt-3" id="disqus_thread"></div>
+      </div>
+      <script>
+      PAGE_IDENTIFIER = `{{ page.url }}`;
+      var disqus_config = function () {
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      (function() { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://fragosti.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
+    {% endif %}
     <script src="https://unpkg.com/simple-lightbox@2.1.0/dist/simpleLightbox.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/simple-lightbox@2.1.0/dist/simpleLightbox.min.css" />
     <script>
