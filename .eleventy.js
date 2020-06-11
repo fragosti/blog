@@ -5,6 +5,7 @@ const embedYouTube = require('eleventy-plugin-youtube-embed')
 const markdownIt = require('markdown-it')
 const markdownItLinkAttr = require('markdown-it-link-attributes')
 const markdownItAnchor = require('markdown-it-anchor')
+const markdownItAttrs = require('markdown-it-attrs')
 const typesetPlugin = require('eleventy-plugin-typeset')
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
@@ -130,6 +131,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary(
     'md',
     markdownIt({ html: true })
+      .use(markdownItAttrs)
       .use(markdownItAnchor, {
         permalink: true,
         permalinkSymbol: '<i data-feather="link" class="link"></i>',
@@ -160,7 +162,7 @@ module.exports = function (eleventyConfig) {
     transformImgPath: (imgPath) => `./src${imgPath}`,
   })
   eleventyConfig.addPlugin(pluginRss)
-  eleventyConfig.addPlugin(pluginEmbedTweet, { cacheDirectory: '.tweets' })
+  eleventyConfig.addPlugin(pluginEmbedTweet)
 
   return {
     dir: {
