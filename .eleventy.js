@@ -8,6 +8,7 @@ const markdownItAnchor = require('markdown-it-anchor')
 const typesetPlugin = require('eleventy-plugin-typeset')
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
+const pluginEmbedTweet = require('eleventy-plugin-embed-tweet')
 
 module.exports = function (eleventyConfig) {
   /**
@@ -159,6 +160,7 @@ module.exports = function (eleventyConfig) {
     transformImgPath: (imgPath) => `./src${imgPath}`,
   })
   eleventyConfig.addPlugin(pluginRss)
+  eleventyConfig.addPlugin(pluginEmbedTweet, { cacheDirectory: '.tweets' })
 
   return {
     dir: {
