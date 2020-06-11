@@ -4,6 +4,7 @@ title: How This Blog is Made
 description: Building a Statically Generated Blog with Eleventy
 date: 2020-06-01
 tags: post
+templateEngineOverride: md
 ---
 
 Long story short, this blog is implemented using [Eleventy](https://www.11ty.dev/), specifically by using [eleventy-starter](https://github.com/eastslopestudio/eleventy-starter) as a starting point. Feel free to check out [the code](https://github.com/fragosti/blog).
