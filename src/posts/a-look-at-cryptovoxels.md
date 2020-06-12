@@ -164,7 +164,7 @@ When you succeed feel free to come say hi at [my parcel](https://www.cryptovoxel
 
 ## Final thoughts
 
-It's not too late to join the party. The community is very welcoming and the Cryptovoxels team seems to be always implementing feature requests from people in the [Discord](<(https://discord.com/invite/Bv68xT4)>) channel. It's a lot of fun to see it evolve, and I'm sure it will be a lot different just a couple of months from now.
+It's not too late to join the party. The community is very welcoming and the Cryptovoxels team seems to be always implementing feature requests from people in the [Discord](https://discord.com/invite/Bv68xT4) channel. It's a lot of fun to see it evolve, and I'm sure it will be a lot different just a couple of months from now.
 
 As mentioned above, new parcels are being added all the time. You can check out some awesome parcel stats at this [Dune Analytics dashboard](https://explore.duneanalytics.com/public/dashboards/7wZSRLMluMWXSQJPYEVQVheZWBOXDlt8GEeZk05C).
 
