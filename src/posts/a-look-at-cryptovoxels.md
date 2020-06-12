@@ -118,7 +118,7 @@ If that all sounds like too much effort, you can always hire an a [professional 
 
 ### Buy & Sell
 
-A Metaverse would not be complete without an economy. The main thing people exchange in Cryptovoxels are the parcels themselves, which can be bought and sold on [OpenSea](https://opensea.io/assets/cryptovoxels?sortBy=assets_prod_main_price_asc) and [TokenTrove](https://tokentrove.com/Cryptovoxels). On the [OpeanSea activity page](https://opensea.io/activity/cryptovoxels), you can see that 277 ETH (approx. $70,000) of parcels have been traded this week, and 8480 ETH (approx. $2,000.000) has been traded in total. On average, parcels have gone for 1.9 ETH (approx. \$475).
+A Metaverse would not be complete without an economy. The main thing people exchange in Cryptovoxels are the parcels themselves, which can be bought and sold on [OpenSea](https://opensea.io/assets/cryptovoxels?sortBy=assets_prod_main_price_asc) and [TokenTrove](https://tokentrove.com/Cryptovoxels). On the [OpeanSea activity page](https://opensea.io/activity/cryptovoxels), you can see that 277 ETH (approx. $70,000) worth of parcels have been traded this week, and 8480 ETH (approx. $2,000.000) worth has been traded in total. On average, parcels have gone for 1.9 ETH (approx. \$475).
 
 <div class="flex justify-center flex-wrap items-center full-width space-x-2 bg-white">
   <img src="/assets/img/cv-price-dist.png" alt="Cryptovoxels Price Distribution" class="my-4" style="width: 350px">
@@ -126,7 +126,7 @@ A Metaverse would not be complete without an economy. The main thing people exch
   <img src="/assets/img/cv-price-area.png" alt="Cryptovoxels Price Over Area" class="my-4" style="width: 350px"/>
 </div>
 
-Above you can see the distribution of the ETH prices (in wei) for settled trades (left), a plot of ETH price vs. parcel height (middle), and a plot of ETH price vs. parcel area (right) over the past month (May 2020) or so.
+Above you can see the distribution of the ETH prices (in wei) for settled trades, a plot of ETH price vs. parcel height, and a plot of ETH price vs. parcel area over the past month (May 2020) or so. While you do see a lot of sales occur at the 1.5 ETH (approx. $375) mark, you also see some parcels go for over 10 ETH (approx. \$2,500)! The plots show that while there is some noise, price is generally correlated with the size of the parcel.
 
 Anecdotally, the prices of parcels have gotten much higher over the past year. If you want to investigate more, [Cryptovoxels Investment Thoughts](https://andrewsteinwold.substack.com/p/cryptovoxels-investment-thoughts) and [How to Value Virtual Assets](https://andrewsteinwold.substack.com/p/how-to-value-virtual-assets) go pretty in-depth.
 
