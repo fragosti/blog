@@ -6,8 +6,6 @@ date: 2020-06-11
 tags: post
 ---
 
-## The Metaverse
-
 The term "Metaverse" was originally coined by [Neal Stephenson](https://en.wikipedia.org/wiki/Neal_Stephenson) in his 1992 novel [Snow Crash](https://en.wikipedia.org/wiki/Snow_Crash). In the Metaverse humans, as avatars, interact with each other and software agents, in a three-dimensional space that uses the metaphor of the real world. Stephenson used the term to describe a virtual reality-based successor to the Internet.
 
 ![Ready Player One](/assets/img/cv-ready-player-one.jpg){ .mx-auto }
@@ -56,9 +54,9 @@ You can see that [the map](https://www.cryptovoxels.com/map) displays a few isla
   <img src="/assets/img/cv-frankfurt.jpg" alt="Frankfurt" class="my-4" style="width: 350px"/>
 </div>
 
-Each neighborhood has its unique look-and-feel. In [Area 51](https://www.cryptovoxels.com/neighborhoods/area-51), you'll see a lot of alien themed content, and in [Kitties](https://www.cryptovoxels.com/neighborhoods/kitties), you'll see a lot of references to the CryptoKitties game and kitties themselves. Neighborhood building restrictions come into play as well, as some neighborhoods such as [Frankfurt](https://www.cryptovoxels.com/neighborhoods/frankfurt) allow for taller buildings and therefore have a big city vibe.
+Each neighborhood has its unique look-and-feel. In [Area 51](https://www.cryptovoxels.com/neighborhoods/area-51), you'll see a lot of alien themed content, and in [Kitties](https://www.cryptovoxels.com/neighborhoods/kitties), you'll see a lot of references to and collectibles from the CryptoKitties game. Neighborhood building restrictions come into play as well, as some neighborhoods such as [Frankfurt](https://www.cryptovoxels.com/neighborhoods/frankfurt) allow for taller buildings and therefore have a big city vibe.
 
-Of course, neighborhoods are just composed of individual parcels with unique owners and unique builds – some more impressive than others. Take the [DAI House](https://www.cryptovoxels.com/parcels/1418) for example, which is a tribute to the [DAI cryptocurrency](https://makerdao.com/en/) and boasts fountains and spinning DAI models. Another example is the [Token Smart Amphitheatre](https://www.cryptovoxels.com/parcels/2908), which displays some impressive architecture and even a cafe, or [Sugar Club](https://www.cryptovoxels.com/parcels/2792) where people go to listen to music and dance (yes, there is a dance button).
+Of course, neighborhoods are just composed of individual parcels with unique owners and unique builds – some more impressive than others. Take the [DAI House](https://www.cryptovoxels.com/parcels/1418) for example, which is a tribute to the [DAI cryptocurrency](https://makerdao.com/en/) and boasts fountains and spinning 3D DAI models. Another example is the [Token Smart Amphitheatre](https://www.cryptovoxels.com/parcels/2908), which displays some impressive architecture and even a cafe, or [Sugar Club](https://www.cryptovoxels.com/parcels/2792) where people go to listen to music and dance (yes, there is a dance button).
 
 <div class="flex justify-center flex-wrap items-center full-width space-x-2">
   <img src="/assets/img/cv-dai-house.jpg" alt="DAI House" class="my-4" style="width: 350px">
@@ -72,13 +70,13 @@ There are also quite a few personalities and magnates in Cryptovoxels, who are r
 {% tweet "1260381348746977284" %}
 </div>
 
-In fact, even more recently, people have been gathering at the Voxel Hotel and elsewhere for legitimate meet-ups and events. Many of these meet-ups are [well organized](https://www.vraf.world/) and have considerable thought put into them.
+In fact, as recently as yesterday, people have been gathering at the Voxel Hotel and elsewhere for legitimate meet-ups and events. Many of these meet-ups are [well organized](https://www.vraf.world/) and have considerable thought put into them.
 
 <div class="flex justify-center">
 {% tweet "1271160070282174464" %}
 </div>
 
-There are plenty of secrets to discover as well, as some of the best builds and experiences are hidden away. If you check out [EtherBrews](https://www.cryptovoxels.com/parcels/2902) it appears to be a simple brewery on the water, but if you go inside and fly over the wall, you'll find a beautiful tree. Some builds are straight up puzzles, like [Yours Truly Puzzle](https://www.cryptovoxels.com/parcels/1861) (can you get in?). Finally, you may even find [in-world games like Breakout](https://www.cryptovoxels.com/play?coords=S@289W,3U,476N) appear on random corners of the world since better scripting functionality has been added.
+There are plenty of secrets to discover as well, as some of the best builds and experiences are hidden away. If you check out [EtherBrews](https://www.cryptovoxels.com/parcels/2902) it appears to be a simple brewery on the water, but if you go inside and fly over the wall, you'll find a beautiful tree. Some builds are straight up puzzles, like [Yours Truly Puzzle](https://www.cryptovoxels.com/parcels/1861) (can you get in?). Finally, you may even find [games like Breakout](https://www.cryptovoxels.com/play?coords=S@289W,3U,476N) appear on random corners of the world since better scripting functionality has been added.
 
 <div class="flex justify-center flex-wrap items-center full-width space-x-2">
   <img src="/assets/img/cv-tree.jpg" alt="EtherBrews" class="my-4" style="width: 350px">
@@ -86,7 +84,7 @@ There are plenty of secrets to discover as well, as some of the best builds and 
   <img src="/assets/img/cv-breakout.jpg" alt="Breakout" class="my-4" style="width: 350px"/>
 </div>
 
-The above only scratches the surface what you can explore in Cryptovoxels. You can watch [live events](https://www.cryptovoxels.com/play?coords=W@415E,3S) as Cryptovoxels supports YouTube embeds and Twitch streams, you can [go shopping](https://www.cryptovoxels.com/play?coords=W@134E,171N) (more on that [later](/posts/a-look-at-cryptovoxels/#buy-%26-sell)) and even [pray in a virtual church](https://www.cryptovoxels.com/play?coords=S@214E,76N) if that's your thing.
+The above only scratches the surface of what you can explore in Cryptovoxels. You can watch [live events](https://www.cryptovoxels.com/play?coords=W@415E,3S) as Cryptovoxels supports YouTube embeds and Twitch streams, you can [go shopping](https://www.cryptovoxels.com/play?coords=W@134E,171N) (more on that [later](/posts/a-look-at-cryptovoxels/#buy-%26-sell)) and even [pray in a virtual church](https://www.cryptovoxels.com/play?coords=S@214E,76N) if that's your thing.
 
 <div class="flex justify-center flex-wrap items-center full-width space-x-2">
   <img src="/assets/img/cv-spacex.jpg" alt="Cryptovoxels SpaceX Launch" class="my-4" style="width: 350px">
@@ -146,9 +144,15 @@ On top of that, [wearables](https://www.cryptovoxels.com/wearables) have gotten 
   <img src="/assets/img/cv-watches.jpg" alt="Cryptovoxels Watch" class="my-4" style="width: 350px"/>
 </div>
 
+This is what it looks like when your avatar is completely decked out.
+
+<div class="flex justify-center">
+{% tweet "1267998303217688576" %}
+</div>
+
 ## How to get a parcel
 
-If the prices you see for parcels on OpenSea are a bit out of your price range, you should know that new parcels are minted every Tuesday at approximately 5pm PST. To get in on the action the best first step is to join the [Cryptovoxel Discord](https://discord.com/invite/Bv68xT4), where the `#general` and `#new-island` channels will be the most relevant.
+If the prices you see for parcels on OpenSea are a bit out of your price range, you should know that new parcels are minted every Tuesday at approximately 5pm PST. To get in on the action the best first step is to join the [Cryptovoxels Discord](https://discord.com/invite/Bv68xT4), where the `#general` and `#new-island` channels will be the most relevant.
 
 Every Tuesday the Cryptovoxels team releases new islands around Origin City. The process is likely to change in the future, but the way it works for now is that the team will bulk sell 20-30 new properties at prices from 1 ETH and above (perhaps lower, depending on the island).
 
@@ -157,3 +161,13 @@ To see the parcels before they go on sale, you can check OpenSea for ["Recently 
 If you are technically savvy, I've written a _very_ simple [script](https://github.com/fragosti/sea-sniper) that will participate in the sales for you. However, unless you understand the code, I recommend taking the OpenSea approach. In my experience, it has been very easy to get a parcel this way.
 
 When you succeed feel free to come say hi at [my parcel](https://www.cryptovoxels.com/parcels/1994)!
+
+## Final thoughts
+
+It's not too late to join the party. The community is very welcoming and the Cryptovoxels team seems to be always implementing feature requests from people in the [Discord](<(https://discord.com/invite/Bv68xT4)>) channel. It's a lot of fun to see it evolve, and I'm sure it will be a lot different just a couple of months from now.
+
+As mentioned above, new parcels are being added all the time. You can check out some awesome parcel stats at this [Dune Analytics dashboard](https://explore.duneanalytics.com/public/dashboards/7wZSRLMluMWXSQJPYEVQVheZWBOXDlt8GEeZk05C).
+
+<div class="flex justify-center">
+{% tweet "1271269544993140737" %}
+</div>
