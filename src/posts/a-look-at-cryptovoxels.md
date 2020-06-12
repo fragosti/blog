@@ -48,7 +48,7 @@ While Cryptovoxels feels like a game, it is just an open world. There are no cle
 
 One of the best things to do in Cryptovoxels is to wander around. Every time I explore, I find something new and surprising.
 
-You can see that [the map](https://www.cryptovoxels.com/map) displays a few islands and neighborhoods, such as "Proxima" or "Moon". At the time of writing, there are 31 neighborhoods and 4 islands, although [more are coming online every week](posts/a-look-at-cryptovoxels/#how-to-buy-your-first-parcel).
+You can see that [the map](https://www.cryptovoxels.com/map) displays a few islands and neighborhoods, such as "Proxima" or "Moon". At the time of writing, there are 31 neighborhoods and 4 islands, although [more are coming online every week](posts/a-look-at-cryptovoxels/#how-to-get-a-parcel).
 
 <div class="flex justify-center flex-wrap items-center full-width space-x-2">
   <img src="/assets/img/cv-area-51.jpg" alt="Area 51" class="my-4" style="width: 350px">
@@ -96,7 +96,7 @@ The above only scratches the surface what you can explore in Cryptovoxels. You c
 
 ### Build
 
-After you're done exploring, you may be inspired to build something yourself. Once you [purchase a parcel](/posts/a-look-at-cryptovoxels/#how-to-buy-your-first-parcel), or discover one in "sandbox" mode you'll find that it's pretty easy to get going, but much harder to build more complex builds.
+After you're done exploring, you may be inspired to build something yourself. Once you [purchase a parcel](/posts/a-look-at-cryptovoxels/#how-to-get-a-parcel), or discover one in "sandbox" mode you'll find that it's pretty easy to get going, but much harder to build more complex builds.
 
 https://www.youtube.com/watch?v=9d7GY2u3f2o
 
@@ -146,7 +146,7 @@ On top of that, [wearables](https://www.cryptovoxels.com/wearables) have gotten 
   <img src="/assets/img/cv-watches.jpg" alt="Cryptovoxels Watch" class="my-4" style="width: 350px"/>
 </div>
 
-## How to Buy your First Parcel
+## How to get a parcel
 
 If the prices you see for parcels on OpenSea are a bit out of your price range, you should know that new parcels are minted every Tuesday at approximately 5pm PST. To get in on the action the best first step is to join the [Cryptovoxel Discord](https://discord.com/invite/Bv68xT4), where the `#general` and `#new-island` channels will be the most relevant.
 
