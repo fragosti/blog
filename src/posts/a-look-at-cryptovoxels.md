@@ -4,6 +4,7 @@ title: A Look at Cryptovoxels
 description: The Metaverse Being Built on Ethereum
 date: 2020-06-11
 tags: post
+image: cv-ready-player-one.jpg
 ---
 
 The term "Metaverse" was originally coined by [Neal Stephenson](https://en.wikipedia.org/wiki/Neal_Stephenson) in his 1992 novel [Snow Crash](https://en.wikipedia.org/wiki/Snow_Crash). In the Metaverse humans, as avatars, interact with each other and software agents, in a three-dimensional space that uses the metaphor of the real world. Stephenson used the term to describe a virtual reality-based successor to the Internet.
