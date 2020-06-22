@@ -3987,10 +3987,10 @@ eleventy-plugin-lazyimages@^1.1.2:
   dependencies:
     typeset "^0.2.2"
 
-eleventy-plugin-youtube-embed@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/eleventy-plugin-youtube-embed/-/eleventy-plugin-youtube-embed-1.3.2.tgz#2f094cc9c8086eb6ba2aebec3d99af6929a1e462"
-  integrity sha512-vuBxv5tkSTpprhYTDdROvJmI/D8td3tHltbIkZ3AzzyWtkuF+BjcBquqHd2k1l2t+yC3dzJ4XsKqnQMPq0aoNQ==
+eleventy-plugin-youtube-embed@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/eleventy-plugin-youtube-embed/-/eleventy-plugin-youtube-embed-1.3.3.tgz#e39b89901d621acce0d9463530ec6c438c4fb82e"
+  integrity sha512-w3nurF4VaY5ao/ZM+Wl64A9+mUUlx0fcTpnqXSG9vdby4zupDY7ZQyjpISaAkDNH9o6hLx0HB+b+po2sV+MQHA==
 
 elliptic@^6.0.0, elliptic@^6.5.2:
   version "6.5.2"
