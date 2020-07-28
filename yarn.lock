@@ -7,14 +7,13 @@
   resolved "https://registry.yarnpkg.com/@11ty/dependency-tree/-/dependency-tree-1.0.0.tgz#b1fa53da49aafe0ab3fe38bc6b6058b704aa59a1"
   integrity sha512-2FWYlkphQ/83MG7b9qqBJfJJ0K9zupNz/6n4EdDuNLw6hQHGp4Sp4UMDRyBvA/xCTYDBaPSuSjHuu45tSujegg==
 
-"@11ty/eleventy-plugin-rss@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-rss/-/eleventy-plugin-rss-1.0.7.tgz#19c572b894896b8e25404b43e7584f7ab57c8132"
-  integrity sha512-fP06UhcOn45XfXBpAkDL0VlsOQ9poCK+BbdSwhmsYaqJzYVf9whIdRwqX0FUaSy1659bQC8auaXNyGsJQUq87w==
+"@11ty/eleventy-plugin-rss@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-rss/-/eleventy-plugin-rss-1.0.9.tgz#bc46085918e788a72a517b79c60d425fe0c78831"
+  integrity sha512-2KlFwjEuYNhNjiWvJZ9m0TcLh+9cocw+S3bGx1HN4KIaqPXF3+SXXxZs3uGbj4Kz+X9XxExe/EC9Y8eH5BDCzA==
   dependencies:
     debug "^4.1.1"
-    luxon "^1.0.0"
-    posthtml "^0.11.2"
+    posthtml "^0.13.0"
     posthtml-urls "1.0.0"
 
 "@11ty/eleventy-plugin-syntaxhighlight@^3.0.1":
@@ -6768,7 +6767,7 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-luxon@^1.0.0, luxon@^1.24.1:
+luxon@^1.24.1:
   version "1.24.1"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.24.1.tgz#a8383266131ed4eaed4b5f430f96f3695403a52a"
   integrity sha512-CgnIMKAWT0ghcuWFfCWBnWGOddM0zu6c4wZAWmD0NN7MZTnro0+833DF6tJep+xlxRPg4KtsYEHYLfTMBQKwYg==
@@ -8643,6 +8642,14 @@ posthtml@^0.12.0:
   version "0.12.3"
   resolved "https://registry.yarnpkg.com/posthtml/-/posthtml-0.12.3.tgz#8fa5b903907e9c10ba5b883863cc550189a309d5"
   integrity sha512-Fbpi95+JJyR0tqU7pUy1zTSQFjAsluuwB9pJ1h0jtnGk7n/O2TBtP5nDl9rV0JVACjQ1Lm5wSp4ppChr8u3MhA==
+  dependencies:
+    posthtml-parser "^0.4.2"
+    posthtml-render "^1.2.2"
+
+posthtml@^0.13.0:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/posthtml/-/posthtml-0.13.1.tgz#3b85df6b0e084370a713302043c1c0f47cbaa5a8"
+  integrity sha512-8aJZ63WYL9YsAZVcrIn6U0dSYbna7hcTceZjnbH7dilg01t4t3JDx0UovbhGFscFJg/++qhECCjGEQuJAqD7dA==
   dependencies:
     posthtml-parser "^0.4.2"
     posthtml-render "^1.2.2"
