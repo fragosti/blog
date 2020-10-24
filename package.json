@@ -46,7 +46,7 @@
     "postcss-nested": "^4.2.3",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.1",
-    "tailwindcss": "^1.5.2",
+    "tailwindcss": "^1.9.6",
     "tailwindcss-dark-mode": "^1.1.4"
   },
   "dependencies": {
