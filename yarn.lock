@@ -8536,7 +8536,7 @@ postcss-reduce-transforms@^4.0.2:
     postcss "^7.0.0"
     postcss-value-parser "^3.0.0"
 
-postcss-selector-parser@6.0.2, postcss-selector-parser@^6.0.0, postcss-selector-parser@^6.0.2:
+postcss-selector-parser@6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-6.0.2.tgz#934cf799d016c83411859e09dcecade01286ec5c"
   integrity sha512-36P2QR59jDTOAiIkqEprfJDsoNrvwFei3eCqKd1Y0tUsBimsq39BLp7RD+JWny3WgB1zGhJX8XVePwm9k4wdBg==
@@ -8553,6 +8553,16 @@ postcss-selector-parser@^3.0.0:
     dot-prop "^5.2.0"
     indexes-of "^1.0.1"
     uniq "^1.0.1"
+
+postcss-selector-parser@^6.0.0, postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.4:
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-6.0.4.tgz#56075a1380a04604c38b063ea7767a129af5c2b3"
+  integrity sha512-gjMeXBempyInaBqpp8gODmwZ52WaYsVOsfr4L4lDQ7n3ncD6mEyySiDtgzCT+NYC0mmeOLvtsF8iaEf0YT6dBw==
+  dependencies:
+    cssesc "^3.0.0"
+    indexes-of "^1.0.1"
+    uniq "^1.0.1"
+    util-deprecate "^1.0.2"
 
 postcss-svgo@^4.0.2:
   version "4.0.2"
@@ -10345,14 +10355,15 @@ symbol-tree@^3.2.2, symbol-tree@^3.2.4:
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
   integrity sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
 
-tailwindcss-dark-mode@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/tailwindcss-dark-mode/-/tailwindcss-dark-mode-1.1.4.tgz#730f03022dc132c56d5716170520520bf4b1b2cc"
-  integrity sha512-e0zgg6V5wc+pUHLdjc7oxnbetcPv0hqvUPMfK3tvugwyEZtG8n8FhDu3kkPbu7KwAqB7NQ8aONITv+jB2TVpRA==
+tailwindcss-dark-mode@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/tailwindcss-dark-mode/-/tailwindcss-dark-mode-1.1.7.tgz#b9b1a49fed12601826c6b6b7e9f98170e4b14abf"
+  integrity sha512-RGYAlOJq4VynCy7LRAIJPHHvV1E3wivMD+K2njVlqIJsegqAZSGIOYnlQwNnkYrQCdFcNZj/ygzplB4y4mYITg==
   dependencies:
-    tailwindcss "^1.2.0"
+    postcss-selector-parser "^6.0.4"
+    tailwindcss "^1.9.2"
 
-tailwindcss@^1.2.0, tailwindcss@^1.9.6:
+tailwindcss@^1.9.2, tailwindcss@^1.9.6:
   version "1.9.6"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.9.6.tgz#0c5089911d24e1e98e592a31bfdb3d8f34ecf1a0"
   integrity sha512-nY8WYM/RLPqGsPEGEV2z63riyQPcHYZUJpAwdyBzVpxQHOHqHE+F/fvbCeXhdF1+TA5l72vSkZrtYCB9hRcwkQ==
@@ -10951,7 +10962,7 @@ utif@^2.0.1:
   dependencies:
     pako "^1.0.5"
 
-util-deprecate@^1.0.1, util-deprecate@~1.0.1:
+util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
