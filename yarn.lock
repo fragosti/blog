@@ -17,12 +17,13 @@
     posthtml "^0.11.2"
     posthtml-urls "1.0.0"
 
-"@11ty/eleventy-plugin-syntaxhighlight@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-syntaxhighlight/-/eleventy-plugin-syntaxhighlight-3.0.1.tgz#24fb872d1bb8f8dee8d6df22d3614aaff6b45306"
-  integrity sha512-+cXc5oyFagCat+JgIh+4cI1otQMVYSsXjxj2/8J78I+p6ICvCfObzvi7PTXvDPbwXOQP8RkcB4DYOP+MKkcPAw==
+"@11ty/eleventy-plugin-syntaxhighlight@^3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-syntaxhighlight/-/eleventy-plugin-syntaxhighlight-3.0.4.tgz#60b134e5054953008d01ff0250705b821ac9f5b0"
+  integrity sha512-wMFIo74AZil2vk+BeaDyXd0eQcmrTIEDNrpPPEIChgRnS+pJIkFpDz0LJM73x1dUltpaVU4UlYHRD52ueMAyHQ==
   dependencies:
-    prismjs "^1.17.1"
+    jsdom "^16.4.0"
+    prismjs "^1.21.0"
 
 "@11ty/eleventy@^0.11.0":
   version "0.11.0"
@@ -5972,7 +5973,7 @@ jsdom@^14.1.0:
     ws "^6.1.2"
     xml-name-validator "^3.0.0"
 
-jsdom@^16.2.2:
+jsdom@^16.2.2, jsdom@^16.4.0:
   version "16.4.0"
   resolved "https://registry.yarnpkg.com/jsdom/-/jsdom-16.4.0.tgz#36005bde2d136f73eee1a830c6d45e55408edddb"
   integrity sha512-lYMm3wYdgPhrl7pDcRmvzPhhrGVBeVhPIqeHjzeiHN3DFmD1RBpbExbi8vU7BJdH8VAZYovR8DMt0PNNDM7k8w==
@@ -8408,7 +8409,7 @@ pretty@^2.0.0:
     extend-shallow "^2.0.1"
     js-beautify "^1.6.12"
 
-prismjs@^1.17.1:
+prismjs@^1.21.0:
   version "1.22.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.22.0.tgz#73c3400afc58a823dd7eed023f8e1ce9fd8977fa"
   integrity sha512-lLJ/Wt9yy0AiSYBf212kK3mM5L8ycwlyTlSxHBAneXLR0nzFMlZ5y7riFPF3E33zXOF2IH95xdY5jIyZbM9z/w==
