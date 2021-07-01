@@ -6520,10 +6520,10 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-markdown-it-anchor@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-5.3.0.tgz#d549acd64856a8ecd1bea58365ef385effbac744"
-  integrity sha512-/V1MnLL/rgJ3jkMWo84UR+K+jF1cxNG1a+KwqeXqTIJ+jtA8aWSHuigx8lTzauiIjBDbwF3NcWQMotd0Dm39jA==
+markdown-it-anchor@^8.0.5:
+  version "8.0.5"
+  resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-8.0.5.tgz#1f45e93fee9ddec30608296d9cd34ebe76d356f5"
+  integrity sha512-yoCu0dvXL+iLCq0mD5NnVFHIAMeRKWKq2ni0/BW3oRdh1lqKqb1RpWUhTso3GU5bgeQUXLsBes/p5wZV6Eb7PQ==
 
 markdown-it-attrs@^3.0.3:
   version "3.0.3"
