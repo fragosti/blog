@@ -15,7 +15,7 @@
     "clean:site": "rimraf ./dist",
     "build": "run-s clean build:*",
     "build:html": "cross-env ELEVENTY_ENV=production eleventy",
-    "build:assets": "cross-env NODE_ENV=production parcel build ./src/assets/*/*.{js,css,jpg,png,svg} --dist-dir ./dist/assets --no-source-maps",
+    "build:assets": "cross-e nv NODE_ENV=production parcel build ./src/assets/*/*.{js,css,jpg,png,svg} --dist-dir ./dist/assets --no-source-maps",
     "watch": "run-s clean:* && run-p watch:*",
     "watch:html": "cross-env ELEVENTY_ENV=development eleventy --serve --port=8080",
     "watch:assets": "cross-env NODE_ENV=development parcel watch ./src/assets/*/*.{js,css,jpg,png,svg} --dist-dir ./dist/assets --no-source-maps --no-hmr",
