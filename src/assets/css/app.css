@@ -28,10 +28,10 @@ p a {
   @apply text-indigo-500 underline;
 }
 label {
-  @apply text-gray-600 font-primary text-sm inline-block;
+  @apply text-gray-500 font-primary text-sm inline-block;
 }
 .link {
-  @apply text-gray-600 font-primary cursor-pointer;
+  @apply text-gray-500 font-primary cursor-pointer;
 }
 ul,
 ol {
