@@ -77,7 +77,7 @@ h3:hover .header-anchor {
 img:not(.rounded-full) {
   @apply cursor-pointer shadow-md;
 }
-.mode-dark {
+.dark {
   body {
     @apply text-white;
   }

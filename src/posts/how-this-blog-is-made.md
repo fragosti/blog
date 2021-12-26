@@ -221,7 +221,7 @@ The corresponding HTML is:
 <div data-controller="dark-mode-controller" class="link mt-8 mb-6">
   <i
     data-feather="moon"
-    data-target="dark-mode-controller.darkToggle"
+    data-dark-mode-controller-target="darkToggle"
     class="hidden"
     data-action="click->dark-mode-controller#useDarkMode"
   ></i>

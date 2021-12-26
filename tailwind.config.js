@@ -1,7 +1,8 @@
 const { theme, variants } = require('tailwindcss/defaultConfig')
 
 module.exports = {
-  purge: ['./src/assets/js/**/*.js', './src/**/*.njk', './src/**/*.md'],
+  content: ['./src/assets/js/**/*.js', './src/**/*.njk', './src/**/*.md'],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -10,10 +11,4 @@ module.exports = {
       },
     },
   },
-  variants: {
-    borderColor: ['dark', 'dark-hover', ...variants.borderColor],
-    textColor: ['dark', 'dark-hover', ...variants.textColor],
-    backgroundColor: ['dark', 'dark-hover', ...variants.backgroundColor],
-  },
-  plugins: [require('tailwindcss-dark-mode')()],
 }

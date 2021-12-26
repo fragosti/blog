@@ -3,7 +3,7 @@ description: Posts, projects and more by fragosti
 image: fragosti.png
 ---
 <!DOCTYPE html>
-<html lang="en" class="mode-dark">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
@@ -42,7 +42,7 @@ image: fragosti.png
       gtag('js', new Date());
       gtag('config', 'UA-97559297-4');
     </script>
-    <script src="/assets/js/app.js" defer></script>
+    <script type="module" src="/assets/js/app.js" defer></script>
   </head>
   <body class="container max-w-2xl mx-auto dark:bg-gray-900 px-4 lg:px-0 transition-colors duration-300 ease-in-out">
     <div class="divide-y divide-gray-500">
@@ -50,7 +50,7 @@ image: fragosti.png
         <div class="flex flex-row justify-between items-center my-6">    
           <a href="/" class="block font-secondary text-2xl font-bold">fragosti</a>
           <div data-controller="dark-mode-controller" class="link mt-8 mb-6">
-            <i data-feather="moon" data-target="dark-mode-controller.darkToggle" class="hidden" data-action="click->dark-mode-controller#useDarkMode"></i>
+            <i data-feather="moon" data-dark-mode-controller-target="darkToggle" class="hidden" data-action="click->dark-mode-controller#useDarkMode"></i>
             <i data-feather="sun" data-target="dark-mode-controller.lightToggle" data-action="click->dark-mode-controller#useLightMode"></i>
           </div>
         </div>

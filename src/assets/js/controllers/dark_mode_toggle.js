@@ -10,13 +10,13 @@ export default class extends Controller {
     }
   }
   useDarkMode() {
-    document.documentElement.classList.add('mode-dark')
+    document.documentElement.classList.add('dark')
     localStorage.setItem('isLightMode', false)
     this.darkToggleTarget.classList.add('hidden')
     this.lightToggleTarget.classList.remove('hidden')
   }
   useLightMode() {
-    document.documentElement.classList.remove('mode-dark')
+    document.documentElement.classList.remove('dark')
     localStorage.setItem('isLightMode', true)
     this.darkToggleTarget.classList.remove('hidden')
     this.lightToggleTarget.classList.add('hidden')
